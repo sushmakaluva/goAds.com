@@ -1,4 +1,4 @@
-# project2
+# goAds.com
 
 ## Description
 + goAds.com is an online classified advertising services platform. 
