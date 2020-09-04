@@ -1,12 +1,11 @@
+const Sequelize = require('sequelize');
 const db = require('../models');
 
 module.exports = function (app) {
   // Get route for returning products which have deals
-  app.get('api/deals', (req, res) => {
+  app.get('/api/deals', (req, res) => {
     db.Products.findAll({
-      where: {
-        category: req.params.category,
-      },
+      order: Sequelize.literal('rand()'), limit: 3,
     })
       .then((dbProduct) => {
         res.json(dbProduct);
@@ -27,7 +26,7 @@ module.exports = function (app) {
 
   // GET route for retrieving a single product
   app.get('/api/products/:product_id', (req, res) => {
-    db.Post.findOne({
+    db.Products.findOne({
       where: {
         product_id: req.params.product_id,
       },
