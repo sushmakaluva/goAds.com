@@ -2579,44 +2579,44 @@ input:focus::-moz-placeholder {
 }
 
 /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-.padding-bottom {
-  padding-bottom: 250px;
-}
+/* .padding-bottom { */
+  /* padding-bottom: 150px; */
+/* } */
 
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+/* @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-  .padding-bottom {
-    padding-bottom: 250px;
+  /* .padding-bottom { */
+    /* padding-bottom: 250px;
   }
-}
+} */
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+/* @media only screen and (min-width: 992px) and (max-width: 1199px) { */
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-  .padding-bottom {
+  /* .padding-bottom {
     padding-bottom: 150px;
   }
-}
+} */
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* @media only screen and (min-width: 768px) and (max-width: 991px) { */
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-  .padding-bottom {
-    padding-bottom: 40px;
-  }
-}
+  /* .padding-bottom {
+    padding-bottom: 40px; */
+  /* } */
+/* } */
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* @media only screen and (min-width: 576px) and (max-width: 767px) { */
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-  .padding-bottom {
+  /* .padding-bottom {
     padding-bottom: 10px;
-  }
-}
+  } */
+/* } */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) { */
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-  .padding-bottom {
+  /* .padding-bottom {
     padding-bottom: 10px;
-  }
-}
+  } */
+/* } */ 
 
 /* line 734, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
 .lf-padding {
@@ -2696,8 +2696,8 @@ input:focus::-moz-placeholder {
 
 /* line 778, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
 .section-padding30 {
-  padding-top: 200px;
-  padding-bottom: 170px;
+  padding-top: 130px;
+  padding-bottom: 110px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
