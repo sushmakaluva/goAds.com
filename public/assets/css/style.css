@@ -320,7 +320,11 @@ button {
 }
 
 /* line 97, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-button:focus, input:focus, input:focus, textarea, textarea:focus {
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
   outline: 0;
 }
 
@@ -332,9 +336,9 @@ button:focus, input:focus, input:focus, textarea, textarea:focus {
 /* line 102, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
 input:focus::-moz-placeholder {
   opacity: 0;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 /* line 109, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
@@ -387,7 +391,7 @@ input:focus::-moz-placeholder {
 .overlay2::before {
   position: absolute;
   content: "";
-  background-color: #2E2200;
+  background-color: #2e2200;
   top: 0;
   left: 0;
   width: 100%;
@@ -540,7 +544,8 @@ input:focus::-moz-placeholder {
 }
 
 /* line 287, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-.btn.focus, .btn:focus {
+.btn.focus,
+.btn:focus {
   outline: 0;
   box-shadow: none;
 }
@@ -2432,9 +2437,9 @@ input:focus::-moz-placeholder {
   right: 0;
   bottom: 0;
   z-index: 999999;
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
   margin: 0 auto;
 }
 
@@ -2456,9 +2461,9 @@ input:focus::-moz-placeholder {
   background-color: #ffffff;
   -webkit-animation: zoom 2000ms infinite ease;
   animation: zoom 2000ms infinite ease;
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 /* line 622, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
@@ -2480,9 +2485,9 @@ input:focus::-moz-placeholder {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   padding-top: 6px;
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 /* line 643, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
@@ -2501,16 +2506,16 @@ input:focus::-moz-placeholder {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .6s;
-    -o-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    -webkit-transition: .6s;
-    -o-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
   }
 }
 
@@ -2518,16 +2523,16 @@ input:focus::-moz-placeholder {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .6s;
-    -o-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    -webkit-transition: .6s;
-    -o-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
   }
 }
 
@@ -2695,9 +2700,9 @@ input:focus::-moz-placeholder {
 }
 
 /* line 778, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
-.section-padding30 {
-  padding-top: 200px;
-  padding-bottom: 170px;
+.section-padding10 {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -3129,7 +3134,7 @@ input:focus {
 /* line 1027, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
 .section_tittle h2 {
   font-size: 36px;
-  color: #4B3049;
+  color: #4b3049;
   line-height: 27px;
   font-weight: 700;
   position: relative;
@@ -3685,7 +3690,7 @@ input:focus {
   -ms-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
-  box-shadow: 0 2px 5pxrgba 0,0,0,0.3;
+  box-shadow: 0 2px 5pxrgba 0, 0, 0, 0.3;
 }
 
 /* line 208, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
@@ -3847,7 +3852,9 @@ input:focus {
 }
 
 /* line 355, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
-.header-area .nice-select .option:hover, .header-area .nice-select .option.focus, .header-area .nice-select .option.selected.focus {
+.header-area .nice-select .option:hover,
+.header-area .nice-select .option.focus,
+.header-area .nice-select .option.selected.focus {
   background-color: #00b1ff;
 }
 
@@ -4096,9 +4103,9 @@ input:focus {
   border-radius: 50%;
   cursor: pointer;
   background: #ff003c;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 /* line 157, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_h1-hero.scss */
@@ -4418,7 +4425,11 @@ input:focus {
 }
 
 /* line 57, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
-.latest-product-area .single-product .product-caption .product-ratting i.low-star {
+.latest-product-area
+  .single-product
+  .product-caption
+  .product-ratting
+  i.low-star {
   color: #d3d3d3;
 }
 
@@ -4459,12 +4470,13 @@ input:focus {
 @media (max-width: 767px) {
   /* line 88, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
   .latest-product-area .nav-tabs .nav-link {
-    padding: .5rem .6rem;
+    padding: 0.5rem 0.6rem;
   }
 }
 
 /* line 96, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
-.latest-product-area .nav-tabs .nav-item.show .nav-link, .latest-product-area .nav-tabs .nav-link.active {
+.latest-product-area .nav-tabs .nav-item.show .nav-link,
+.latest-product-area .nav-tabs .nav-link.active {
   color: #ff003c;
 }
 
@@ -4497,7 +4509,9 @@ input:focus {
 }
 
 /* line 124, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
-.latest-product-area .nice-select .option:hover, .latest-product-area .nice-select .option.focus, .latest-product-area .nice-select .option.selected.focus {
+.latest-product-area .nice-select .option:hover,
+.latest-product-area .nice-select .option.focus,
+.latest-product-area .nice-select .option.selected.focus {
   background-color: #00b1ff;
 }
 
@@ -4531,7 +4545,7 @@ input:focus {
   position: absolute;
   right: 145px;
   bottom: 64px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5201,16 +5215,17 @@ input:focus {
 .blog_area a {
   color: "Playfair Display", serif !important;
   text-decoration: none;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /* line 14, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
-.blog_area a:hover, .blog_area a :hover {
+.blog_area a:hover,
+.blog_area a :hover {
   background: -webkit-linear-gradient(131deg, #ff003c 0%, #ff003c 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /* line 24, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
@@ -5232,7 +5247,7 @@ input:focus {
 
 /* line 36, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
 .single-blog .thumb:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -5282,7 +5297,7 @@ input:focus {
 
 /* line 84, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
 .single-blog .tag:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 10px;
@@ -5341,7 +5356,7 @@ input:focus {
 
 /* line 135, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
 .single-blog:hover .thumb:after {
-  opacity: .7;
+  opacity: 0.7;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -6353,7 +6368,7 @@ input:focus {
 
 /* line 1267, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
 .single-post-area .navigation-area .nav-left:hover .thumb img {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media (max-width: 767px) {
@@ -6401,7 +6416,7 @@ input:focus {
 
 /* line 1302, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog_page.scss */
 .single-post-area .navigation-area .nav-right:hover .thumb img {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media (max-width: 991px) {
@@ -6633,7 +6648,8 @@ input:focus {
 }
 
 /* line 16, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_contact.scss */
-.contact-info__icon i, .contact-info__icon span {
+.contact-info__icon i,
+.contact-info__icon span {
   color: #8f9195;
   font-size: 27px;
 }
@@ -6872,7 +6888,7 @@ input:focus {
 .popup_box h3 {
   text-align: center;
   font-size: 22px;
-  color: #1F1F1F;
+  color: #1f1f1f;
   margin-bottom: 46px;
 }
 
@@ -6887,7 +6903,7 @@ input:focus {
   -webkit-tap-highlight-color: transparent;
   background-color: #fff;
   /* border-radius: 5px; */
-  border: solid 1px #E2E2E2;
+  border: solid 1px #e2e2e2;
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -7016,7 +7032,7 @@ input:focus {
   touch-action: manipulation;
   width: 40px;
   height: 40px;
-  background: #4A3600;
+  background: #4a3600;
   text-align: center;
   line-height: 20px;
   position: absolute;
@@ -7037,7 +7053,7 @@ input:focus {
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #4A3600;
+  background: #4a3600;
   opacity: 0.6;
 }
 
@@ -7072,9 +7088,21 @@ input:focus {
 
 /* line 13, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_extend.scss */
 .overlay::before {
-  background-image: -moz-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
-  background-image: -webkit-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
-  background-image: -ms-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
+  background-image: -moz-linear-gradient(
+    170deg,
+    rgba(34, 34, 34, 0) 0%,
+    black 100%
+  );
+  background-image: -webkit-linear-gradient(
+    170deg,
+    rgba(34, 34, 34, 0) 0%,
+    black 100%
+  );
+  background-image: -ms-linear-gradient(
+    170deg,
+    rgba(34, 34, 34, 0) 0%,
+    black 100%
+  );
 }
 
 /**************** extend css start ****************/
@@ -7138,7 +7166,7 @@ del {
   outline: none;
   line-height: 40px;
   padding: 0 30px;
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
@@ -7971,7 +7999,8 @@ del {
 
 /* line 766, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8013,7 +8042,8 @@ del {
 
 /* line 803, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url(../img/elements/success-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8061,7 +8091,8 @@ del {
 
 /* line 844, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8103,7 +8134,8 @@ del {
 
 /* line 881, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8145,7 +8177,8 @@ del {
 
 /* line 918, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/success-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8193,7 +8226,8 @@ del {
 
 /* line 959, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -8433,9 +8467,9 @@ del {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #1e1e1e;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   text-transform: capitalize;
 }
 
@@ -8552,7 +8586,7 @@ del {
 /* line 2, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog.scss */
 .blog-area .single-blog {
   box-shadow: 1.395px 19.951px 38px 0px rgba(0, 0, 0, 0.05);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /* line 5, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog.scss */
@@ -8602,7 +8636,7 @@ del {
 .blog-area .single-blog .blog-caption .blog-cap-top ul li {
   color: #c7c7c7;
   font-size: 14px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* line 40, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_blog.scss */
@@ -8615,7 +8649,7 @@ del {
 .blog-area .single-blog .blog-caption .blog-cap-mid p a {
   color: #444444;
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 28px;
   margin-bottom: 30px;
 }
@@ -8756,7 +8790,7 @@ del {
 .single_product_list .single_product_content h5 {
   font-weight: 500;
   font-size: 20px;
-  color: #B08EAD;
+  color: #b08ead;
 }
 
 @media (max-width: 991px) {
@@ -8839,23 +8873,37 @@ del {
 
 @media (max-width: 991px) {
   /* line 73, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-  .single_product_list .single_product_iner:nth-child(2n-2) .row .single_product_content {
+  .single_product_list
+    .single_product_iner:nth-child(2n-2)
+    .row
+    .single_product_content {
     margin-top: 40px;
   }
   /* line 76, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-  .single_product_list .single_product_iner:nth-child(2n-2) .row .single_product_content .btn_3 {
+  .single_product_list
+    .single_product_iner:nth-child(2n-2)
+    .row
+    .single_product_content
+    .btn_3 {
     padding: 13px 29px;
   }
 }
 
 /* line 82, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-.single_product_list .single_product_iner:nth-child(2n-2) .row .single_product_img {
+.single_product_list
+  .single_product_iner:nth-child(2n-2)
+  .row
+  .single_product_img {
   position: relative;
   margin: 0 35px 35px 0;
 }
 
 /* line 85, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-.single_product_list .single_product_iner:nth-child(2n-2) .row .single_product_img .product_overlay {
+.single_product_list
+  .single_product_iner:nth-child(2n-2)
+  .row
+  .single_product_img
+  .product_overlay {
   position: absolute;
   left: auto;
   right: -35px;
@@ -8888,15 +8936,16 @@ del {
 }
 
 /* line 109, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-.product_image_area .owl-nav button.owl-prev, .product_image_area .owl-nav button.owl-next {
+.product_image_area .owl-nav button.owl-prev,
+.product_image_area .owl-nav button.owl-next {
   width: 40px;
   height: 40px;
   font-size: 14px;
   line-height: 40px;
   border-radius: 50%;
-  border: 1px solid #E4D3DF;
+  border: 1px solid #e4d3df;
   color: #fff;
-  background-color: #E4D3DF;
+  background-color: #e4d3df;
   position: absolute;
   left: 30px;
   top: 54%;
@@ -8905,7 +8954,8 @@ del {
 }
 
 /* line 122, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_single_product.scss */
-.product_image_area .owl-nav button.owl-prev:hover, .product_image_area .owl-nav button.owl-next:hover {
+.product_image_area .owl-nav button.owl-prev:hover,
+.product_image_area .owl-nav button.owl-next:hover {
   background-color: #828bb2;
   color: #fff;
 }
@@ -9039,7 +9089,7 @@ input:focus {
 
 /* line 1, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_trending_items.scss */
 .trending_items {
-  background-color: #F4EDF2;
+  background-color: #f4edf2;
   padding: 200px 0 130px;
 }
 
@@ -9140,7 +9190,7 @@ input:focus {
 .client_review {
   padding: 100px 0;
   text-align: center;
-  background-color: #B08EAD;
+  background-color: #b08ead;
   position: relative;
 }
 
@@ -9207,11 +9257,11 @@ input:focus {
   content: "";
   right: -8px;
   bottom: -10px;
-  content: '\f100';
-  font-family: 'Flaticon';
+  content: "\f100";
+  font-family: "Flaticon";
   height: 50px;
   width: 50px;
-  background-color: #E4D3DF;
+  background-color: #e4d3df;
   font-size: 14px;
   border-radius: 50%;
   line-height: 50px;
@@ -9219,7 +9269,8 @@ input:focus {
 }
 
 /* line 56, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_client_review.scss */
-.client_review .owl-nav button.owl-prev, .client_review .owl-nav button.owl-next {
+.client_review .owl-nav button.owl-prev,
+.client_review .owl-nav button.owl-next {
   width: 40px;
   height: 40px;
   font-size: 14px;
@@ -9235,7 +9286,8 @@ input:focus {
 }
 
 /* line 68, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_client_review.scss */
-.client_review .owl-nav button.owl-prev:hover, .client_review .owl-nav button.owl-next:hover {
+.client_review .owl-nav button.owl-prev:hover,
+.client_review .owl-nav button.owl-next:hover {
   background-color: #828bb2;
   color: #fff;
 }
@@ -9391,7 +9443,7 @@ input:focus {
 
 /* line 43, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_subscribe_part.scss */
 .subscribe_part .subscribe_form ::placeholder {
-  color: #E4D3DF;
+  color: #e4d3df;
 }
 
 /***************** product list css *******************/
@@ -9403,9 +9455,9 @@ input:focus {
 
 /* line 6, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product_list.scss */
 .product_sidebar .single_sedebar input {
-  background-color: #F4EDF2;
+  background-color: #f4edf2;
   border-radius: 50px;
-  border: 1px solid #F4EDF2;
+  border: 1px solid #f4edf2;
   padding: 13px 25px;
   width: 100%;
   line-height: 22px;
@@ -9425,9 +9477,9 @@ input:focus {
 
 /* line 25, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product_list.scss */
 .select_option .select_option_list {
-  background-color: #F4EDF2;
+  background-color: #f4edf2;
   border-radius: 50px;
-  border: 1px solid #F4EDF2;
+  border: 1px solid #f4edf2;
   padding: 13px 25px;
   width: 100%;
   line-height: 22px;
@@ -9436,9 +9488,9 @@ input:focus {
 
 /* line 34, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product_list.scss */
 .select_option .select_option_dropdown {
-  background-color: #F4EDF2;
+  background-color: #f4edf2;
   border-radius: 10px;
-  border: 1px solid #F4EDF2;
+  border: 1px solid #f4edf2;
   padding: 13px 25px;
   width: 100%;
   margin-top: 10px;
@@ -9654,12 +9706,12 @@ input:focus {
 }
 
 /* line 33, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_client_logo.scss */
-.client_logo .single_client_logo:nth-child(5n+1) {
+.client_logo .single_client_logo:nth-child(5n + 1) {
   border-left: 0px solid transparent;
 }
 
 /* line 36, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_client_logo.scss */
-.client_logo .single_client_logo:nth-child(n+6) {
+.client_logo .single_client_logo:nth-child(n + 6) {
   border-bottom: 0px solid transparent;
 }
 
@@ -9901,7 +9953,8 @@ input:focus {
 }
 
 /* line 204, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.widgets_inner input[type=checkbox], .widgets_inner input[type=radio] {
+.widgets_inner input[type="checkbox"],
+.widgets_inner input[type="radio"] {
   margin-right: 15px;
 }
 
@@ -10014,7 +10067,8 @@ input:focus {
 }
 
 /* line 300, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.p_filter_widgets .list li.active a:before, .p_filter_widgets .list li:hover a:before {
+.p_filter_widgets .list li.active a:before,
+.p_filter_widgets .list li:hover a:before {
   background: #2577fd;
   border-color: #2577fd;
 }
@@ -10676,7 +10730,14 @@ input:focus {
 }
 
 /* line 928, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.product_description_area .tab-content .total_rate .rating_list .list li:nth-child a i:last-child {
+.product_description_area
+  .tab-content
+  .total_rate
+  .rating_list
+  .list
+  li:nth-child
+  a
+  i:last-child {
   color: #eeeeee;
 }
 
@@ -11000,7 +11061,13 @@ input:focus {
 }
 
 /* line 32, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.cart_inner .table tbody tr.bottom_button td .cupon_text input:-moz-placeholder {
+.cart_inner
+  .table
+  tbody
+  tr.bottom_button
+  td
+  .cupon_text
+  input:-moz-placeholder {
   font-size: 14px;
   color: #cccccc;
   font-family: "Playfair Display", serif;
@@ -11008,7 +11075,13 @@ input:focus {
 }
 
 /* line 35, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.cart_inner .table tbody tr.bottom_button td .cupon_text input::-moz-placeholder {
+.cart_inner
+  .table
+  tbody
+  tr.bottom_button
+  td
+  .cupon_text
+  input::-moz-placeholder {
   font-size: 14px;
   color: #cccccc;
   font-family: "Playfair Display", serif;
@@ -11016,7 +11089,13 @@ input:focus {
 }
 
 /* line 38, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.cart_inner .table tbody tr.bottom_button td .cupon_text input::-webkit-input-placeholder {
+.cart_inner
+  .table
+  tbody
+  tr.bottom_button
+  td
+  .cupon_text
+  input::-webkit-input-placeholder {
   font-size: 14px;
   color: #cccccc;
   font-family: "Playfair Display", serif;
@@ -11102,7 +11181,14 @@ input:focus {
 }
 
 /* line 1310, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.cart_inner .table tbody tr.shipping_area .shipping_box .list li.active a:after {
+.cart_inner
+  .table
+  tbody
+  tr.shipping_area
+  .shipping_box
+  .list
+  li.active
+  a:after {
   opacity: 1;
 }
 
@@ -11139,7 +11225,14 @@ input:focus {
 }
 
 /* line 1345, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.cart_inner .table tbody tr.shipping_area .shipping_box .shipping_select .list li {
+.cart_inner
+  .table
+  tbody
+  tr.shipping_area
+  .shipping_box
+  .shipping_select
+  .list
+  li {
   font-size: 14px;
   font-weight: normal;
   color: #828bb2;
@@ -11719,7 +11812,11 @@ input:focus {
 }
 
 /* line 29, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.tracking_box_area .tracking_box_inner .tracking_form .form-group input.placeholder {
+.tracking_box_area
+  .tracking_box_inner
+  .tracking_form
+  .form-group
+  input.placeholder {
   font-size: 14px;
   color: #828bb2;
   font-family: "Playfair Display", serif;
@@ -11727,7 +11824,11 @@ input:focus {
 }
 
 /* line 32, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.tracking_box_area .tracking_box_inner .tracking_form .form-group input:-moz-placeholder {
+.tracking_box_area
+  .tracking_box_inner
+  .tracking_form
+  .form-group
+  input:-moz-placeholder {
   font-size: 14px;
   color: #828bb2;
   font-family: "Playfair Display", serif;
@@ -11735,7 +11836,11 @@ input:focus {
 }
 
 /* line 35, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.tracking_box_area .tracking_box_inner .tracking_form .form-group input::-moz-placeholder {
+.tracking_box_area
+  .tracking_box_inner
+  .tracking_form
+  .form-group
+  input::-moz-placeholder {
   font-size: 14px;
   color: #828bb2;
   font-family: "Playfair Display", serif;
@@ -11743,7 +11848,11 @@ input:focus {
 }
 
 /* line 38, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_mixins.scss */
-.tracking_box_area .tracking_box_inner .tracking_form .form-group input::-webkit-input-placeholder {
+.tracking_box_area
+  .tracking_box_inner
+  .tracking_form
+  .form-group
+  input::-webkit-input-placeholder {
   font-size: 14px;
   color: #828bb2;
   font-family: "Playfair Display", serif;
@@ -11849,7 +11958,8 @@ input:focus {
 }
 
 /* line 1943, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.login_part .login_part_text, .login_part .login_part_form {
+.login_part .login_part_text,
+.login_part .login_part_form {
   padding: 80px 70px;
   height: 600px;
   display: table;
@@ -11857,7 +11967,8 @@ input:focus {
 
 @media (max-width: 991px) {
   /* line 1943, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-  .login_part .login_part_text, .login_part .login_part_form {
+  .login_part .login_part_text,
+  .login_part .login_part_form {
     padding: 30px;
     height: 400px;
   }
@@ -11865,23 +11976,42 @@ input:focus {
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 1943, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-  .login_part .login_part_text, .login_part .login_part_form {
+  .login_part .login_part_text,
+  .login_part .login_part_form {
     padding: 20px;
     height: 400px;
   }
 }
 
 /* line 1955, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-.login_part .login_part_text .login_part_text_iner, .login_part .login_part_text .login_part_form_iner, .login_part .login_part_form .login_part_text_iner, .login_part .login_part_form .login_part_form_iner {
+.login_part .login_part_text .login_part_text_iner,
+.login_part .login_part_text .login_part_form_iner,
+.login_part .login_part_form .login_part_text_iner,
+.login_part .login_part_form .login_part_form_iner {
   display: table-cell;
   vertical-align: middle;
 }
 
 /* line 1960, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
 .login_part .login_part_text {
-  background-image: -moz-linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
-  background-image: -webkit-linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
-  background-image: linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
+  background-image: -moz-linear-gradient(
+    90deg,
+    #b08ead 0%,
+    #4b3049 64%,
+    #b08ead 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    #b08ead 0%,
+    #4b3049 64%,
+    #b08ead 100%
+  );
+  background-image: linear-gradient(
+    90deg,
+    #b08ead 0%,
+    #4b3049 64%,
+    #b08ead 100%
+  );
   background-size: 200% auto;
 }
 
@@ -12137,19 +12267,22 @@ input:focus {
 
 /************ new arrival css here ****************/
 /* line 2, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-.arrival_tittle, .arrival_filter_item {
+.arrival_tittle,
+.arrival_filter_item {
   margin-bottom: 80px;
 }
 
 @media (max-width: 991px) {
   /* line 2, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-  .arrival_tittle, .arrival_filter_item {
+  .arrival_tittle,
+  .arrival_filter_item {
     margin-bottom: 30px;
   }
 }
 
 /* line 7, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-.arrival_tittle h2, .arrival_filter_item h2 {
+.arrival_tittle h2,
+.arrival_filter_item h2 {
   font-size: 50px;
   font-weight: 700;
   text-transform: capitalize;
@@ -12157,13 +12290,15 @@ input:focus {
 
 @media (max-width: 991px) {
   /* line 7, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-  .arrival_tittle h2, .arrival_filter_item h2 {
+  .arrival_tittle h2,
+  .arrival_filter_item h2 {
     font-size: 30px;
   }
 }
 
 /* line 15, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-.arrival_tittle ul li, .arrival_filter_item ul li {
+.arrival_tittle ul li,
+.arrival_filter_item ul li {
   font-size: 16px;
   color: #000;
   text-transform: capitalize;
@@ -12175,7 +12310,8 @@ input:focus {
 
 @media (max-width: 991px) {
   /* line 15, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
-  .arrival_tittle ul li, .arrival_filter_item ul li {
+  .arrival_tittle ul li,
+  .arrival_filter_item ul li {
     margin-left: 0;
     margin-right: 30px;
   }
@@ -12361,7 +12497,7 @@ input:focus {
 
 /* line 152, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_new_arrival.scss */
 .new_arrival .single_arrivel_item:hover:after {
-  opacity: .7;
+  opacity: 0.7;
   visibility: visible;
 }
 
@@ -12416,7 +12552,8 @@ input:focus {
 }
 
 /* line 8, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_shipping_details.scss */
-.shipping_details .single_shopping_details i, .shipping_details .single_shopping_details span {
+.shipping_details .single_shopping_details i,
+.shipping_details .single_shopping_details span {
   font-size: 45px;
 }
 
@@ -12517,7 +12654,7 @@ input:focus {
 /* line 52, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_instagram_photo.scss */
 .instagram_photo .instagram_photo_iner .single_instgram_photo:hover:after {
   visibility: visible;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* line 56, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_instagram_photo.scss */
@@ -13002,7 +13139,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #B08EAD;
+  background-color: #b08ead;
 }
 
 /* line 8, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_breadcrumb.scss */

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goAds</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="site.webmanifest" />
+    <!-- <link rel="manifest" href="site.webmanifest" /> -->
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicon.ico"
+      href="assets/img/logo/favicon.ico"
     />
 
     <!-- CSS here -->
@@ -51,7 +50,7 @@
                 <div
                   class="row d-flex justify-content-between align-items-center"
                 >
-                  <div class="header-info-left d-flex">
+                  <!-- <div class="header-info-left d-flex">
                     <div class="select-this">
                       <form action="#">
                         <div class="select-itms">
@@ -63,18 +62,21 @@
                       </form>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
-          <div class="header-bottom header-sticky">
+          <div class="header-bottom header-fixed">
             <div class="container-fluid">
               <div class="row align-items-center">
                 <!-- Logo -->
                 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                   <div class="logo">
                     <a href="index.html"
-                      ><img src="assets/img/logo/logo.png" alt="logo_pic"
+                      ><img
+                        src="assets/img/logo/logo2.png"
+                        alt="logo_pic"
+                        style="height: 100px; width: 100px"
                     /></a>
                   </div>
                 </div>
@@ -83,11 +85,10 @@
                   <div class="main-menu f-right d-none d-lg-block">
                     <nav>
                       <ul id="navigation">
-                        <li><a href="product_list.html">Wish List </a></li>
-                        <li><a href="cart.html">Categories</a></li>
-                        <li><a href="cart.html">Cart</a></li>
+                        <b><li><a href="categories.html" style="color: white; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Categories</a></li></b>
+                        <b><li><a href="myAds.html" style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">My Ads</a></li></b>
+                        <b><li><a href="wish_list.html" style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Wish List</a></li></b>
 
-                        <li><a href="contact.html">Contact</a></li>
                       </ul>
                     </nav>
                   </div>
@@ -110,13 +111,13 @@
                     </li>
                     <li class="d-none d-xl-block">
                       <div class="favorit-items">
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart" style="color: white;"></i>
                       </div>
                     </li>
                     <li>
                       <div class="shopping-card">
                         <a href="cart.html"
-                          ><i class="fas fa-shopping-cart"></i
+                          ><i class="fas fa-shopping-cart" style="color: white;"></i
                         ></a>
                       </div>
                     </li>
@@ -143,7 +144,7 @@
         <!-- Mobile Menu -->
         <div class="slider-active">
           <div
-            class="single-slider slider-height"
+            class="single-slider slider-height" style="height: 800px;"
             data-background="assets/img/hero/h1_hero.jpg"
           >
             <div class="container">
@@ -158,17 +159,17 @@
                     data-animation="bounceIn"
                     data-delay=".4s"
                   >
-                    <img src="assets/img/hero/hero_man.png" alt="" />
+                    <img src="assets/img/hero/cart_pic.png" style="border-radius:50%; height: auto;" alt="cart_img" />
                   </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
                   <div class="hero__caption">
                     <span data-animation="fadeInRight" data-delay=".4s"
-                      >New Deals</span
+                      ></span
                     >
                     <h1 data-animation="fadeInRight" data-delay=".6s">
-                      Posted<br />
-                      Daily
+                        New deals !!<br />
+                    
                     </h1>
                     <p data-animation="fadeInRight" data-delay=".8s">
                       Everything you need, for less!
@@ -179,7 +180,7 @@
                       data-animation="fadeInRight"
                       data-delay="1s"
                     >
-                      <a href="-" class="btn hero-btn">Shop Now</a>
+                      <a href="-" class="btn hero-btn" style="background-color: black;">Shop Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -202,7 +203,7 @@
                     data-animation="bounceIn"
                     data-delay=".4s"
                   >
-                    <img src="assets/img/hero/hero_man.png" alt="" />
+                    <img src="assets/img/hero/cart_pic.png" alt="" />
                   </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
@@ -234,7 +235,7 @@
       </div>
       <!-- slider Area End-->
       <!-- Category Area Start-->
-      <section class="category-area section-padding30">
+      <section class="category-area section-padding10">
         <div class="container-fluid">
           <!-- Section Tittle -->
           <div class="row">
@@ -292,8 +293,8 @@
             class="row product-btn d-flex justify-content-end align-items-end"
           >
             <!-- Section Tittle -->
-            <div class="col-xl-4 col-lg-5 col-md-5">
-              <div class="section-tittle mb-30">
+            <div class="col-lg-12">
+              <div class="section-tittle text-center mb-85">
                 <h2>Recent Ads</h2>
               </div>
             </div>
