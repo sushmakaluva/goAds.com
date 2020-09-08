@@ -3526,7 +3526,7 @@ input:focus {
   color: #000000;
   display: inline-block;
   text-transform: capitalize;
-  padding: 39px 18px;
+  padding: 10px 18px;
   display: block;
   font-size: 14px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -3539,14 +3539,14 @@ input:focus {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 84, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
   .header-bottom .main-menu ul li a {
-    padding: 39px 15px;
+    padding: 10px 15px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   /* line 84, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
   .header-bottom .main-menu ul li a {
-    padding: 39px 13px;
+    padding: 10px 13px;
   }
 }
 
