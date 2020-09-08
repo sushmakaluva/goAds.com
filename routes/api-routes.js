@@ -12,18 +12,6 @@ module.exports = function (app) {
       });
   });
 
-  // GET route for returning products of a specific category
-  app.get('/api/products/category/:category', (req, res) => {
-    db.Products.findAll({
-      where: {
-        category: req.params.category,
-      },
-    })
-      .then((dbProduct) => {
-        res.json(dbProduct);
-      });
-  });
-
   // GET route for retrieving a single product
   app.get('/api/products/:product_id', (req, res) => {
     db.Products.findOne({
@@ -60,6 +48,19 @@ module.exports = function (app) {
       .then((dbProduct) => {
         res.json(dbProduct);
       });
+  });
+
+  // GET route to display all the products based on category
+  app.get('/products', (req, res) => {
+    const whereCondition = {};
+    if (req.query.category) {
+      whereCondition.category = req.query.category;
+    }
+
+    db.Products.findAll({
+      where: whereCondition,
+    })
+      .then((dbProducts) => res.render('products', { products: dbProducts }));
   });
 
   // PUT route for updating products in cart

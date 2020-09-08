@@ -105,6 +105,6 @@ module.exports = function (sequelize, DataTypes) {
       category: 'Appliances',
       description: 'Multifuction Cooker, Non Stick Pan, Auto Switch Off timer',
     },
-  ]);
+  ], { ignoreDuplicates: true });
   return Products;
 };

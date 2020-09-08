@@ -1,0 +1,13 @@
+<h1>All Products</h1>
+<ul>
+    {{#each products}}
+    {{#dataValues}}
+    <li style='padding:20px; overflow: auto'>
+        <p><span class="label"><b>Name :</b></span> {{this.product_name}}</p>
+        <p><span class="label"><b>Price :</b></span> {{this.price}}</p>
+        <p><span class="label"><b>Category :</b></span> {{this.category}}</p>
+        <p><span class="label"><b>Description :</b></span> {{this.description}}</p>
+    </li>
+    {{/dataValues}}
+    {{/each}}
+</ul>
