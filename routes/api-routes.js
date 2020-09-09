@@ -63,6 +63,17 @@ module.exports = function (app) {
       .then((dbProducts) => res.render('products', { products: dbProducts }));
   });
 
+  // GET route to display recent Ads
+  app.get('/api/recent-ads', (req, res) => {
+    db.Products.findAll({
+      limit: 3,
+      order: [['product_id', 'DESC']],
+    })
+      .then((dbProduct) => {
+        res.json(dbProduct);
+      });
+  });
+
   // PUT route for updating products in cart
   app.put('/api/products', (req, res) => {
     db.Products.update(req.body,
