@@ -1,7 +1,7 @@
 <div class="grid">
-    {{#each products}}
+    {{#each dbProduct}}
     <div class="row">
-        {{#each this}}
+        {{!-- {{#each this}} --}}
         {{#dataValues}}
         <div class="column card col-xl-3 m-4">
             <div class="card-body">
@@ -12,7 +12,7 @@
             </div>
         </div>
         {{/dataValues}}
-        {{/each}}
+        {{!-- {{/each}} --}}
     </div>
     {{/each}}
 </div>

@@ -3,12 +3,14 @@ const db = require('../models');
 
 module.exports = function (app) {
   // Get route for returning products which have deals
-  app.get('/api/deals', (req, res) => {
+  app.get('/deals', (req, res) => {
     db.Products.findAll({
-      order: Sequelize.literal('rand()'), limit: 3,
+      order: Sequelize.literal('rand()'), limit: 5,
     })
       .then((dbProduct) => {
-        res.json(dbProduct);
+        console.log(dbProduct);
+        // res.json(dbProduct);
+        res.render('deals', { dbProduct });
       });
   });
 
@@ -60,7 +62,21 @@ module.exports = function (app) {
     db.Products.findAll({
       where: whereCondition,
     })
-      .then((dbProducts) => res.render('products', { products: dbProducts }));
+      .then((dbProducts) => {
+        const result = [];
+        let temp = [];
+        for (let i = 0; i < dbProducts.length; i++) {
+          temp.push(dbProducts[i]);
+          if (temp.length === 3) {
+            result.push(temp);
+            temp = [];
+          }
+        }
+        if (temp.length > 0) {
+          result.push(temp);
+        }
+        res.render('products', { products: result });
+      });
   });
 
   // GET route to display recent Ads
@@ -70,6 +86,21 @@ module.exports = function (app) {
       order: [['product_id', 'DESC']],
     })
       .then((dbProduct) => {
+        res.json(dbProduct);
+      });
+  });
+
+  // GET route
+  app.get('/search', (req, res) => {
+    db.Products.findAll({
+      limit: 10,
+      where: {
+        product_name: {
+          [Sequelize.Op.like]: `%${req.body.query}%`,
+        },
+      },
+    })
+      .the((dbProduct) => {
         res.json(dbProduct);
       });
   });
