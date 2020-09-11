@@ -13,10 +13,14 @@ module.exports = function (app) {
   
 
   app.get('/cart', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/cart.html'));
-  });
+      res.render('cart');
+    });
 
-  // blog route loads blog.html
+    app.get('/checkout', (req, res) => {
+      res.render('checkout');
+    });
+
+  
   app.get('/categories', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/categories.html'));
   });
