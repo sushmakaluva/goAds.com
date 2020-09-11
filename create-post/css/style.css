@@ -1,0 +1,36 @@
+.page-post {
+  margin: 50px auto;
+  padding: 20px 15px;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+}
+
+.page-wrapper h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card-block {
+  padding: 15px;
+}
+
+.w30 {
+  width: 30%;
+}
+.w20 {
+  width: 20%;
+}
+.w10 {
+  width: 10%;
+}
+.w5 {
+  width: 5%;
+}
+.articles {
+  margin-top: 15px;
+}
+.article-inline {
+  padding-left: 10px;
+}
+.article-inline:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.05);
+}
