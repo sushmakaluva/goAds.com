@@ -5,12 +5,11 @@ module.exports = function (app) {
   // Get route for returning products which have deals
   app.get('/deals', (req, res) => {
     db.Products.findAll({
-      order: Sequelize.literal('rand()'), limit: 5,
+      order: Sequelize.literal('rand()'), limit: 4,
     })
       .then((dbProduct) => {
-        console.log(dbProduct);
-        // res.json(dbProduct);
-        res.render('deals', { dbProduct });
+        const result = gridDisplay(dbProduct);
+        res.render('products', { products: result });
       });
   });
 
@@ -63,21 +62,26 @@ module.exports = function (app) {
       where: whereCondition,
     })
       .then((dbProducts) => {
-        const result = [];
-        let temp = [];
-        for (let i = 0; i < dbProducts.length; i++) {
-          temp.push(dbProducts[i]);
-          if (temp.length === 3) {
-            result.push(temp);
-            temp = [];
-          }
-        }
-        if (temp.length > 0) {
-          result.push(temp);
-        }
+        const result = gridDisplay(dbProducts);
         res.render('products', { products: result });
       });
   });
+
+  function gridDisplay(dbProducts) {
+    const result = [];
+    let temp = [];
+    for (let i = 0; i < dbProducts.length; i++) {
+      temp.push(dbProducts[i]);
+      if (temp.length === 3) {
+        result.push(temp);
+        temp = [];
+      }
+    }
+    if (temp.length > 0) {
+      result.push(temp);
+    }
+    return result;
+  }
 
   // GET route to display recent Ads
   app.get('/api/recent-ads', (req, res) => {
@@ -92,16 +96,18 @@ module.exports = function (app) {
 
   // GET route
   app.get('/search', (req, res) => {
+    console.log(req.query);
     db.Products.findAll({
       limit: 10,
       where: {
         product_name: {
-          [Sequelize.Op.like]: `%${req.body.query}%`,
+          [Sequelize.Op.like]: `%${req.query.keyword}%`,
         },
       },
     })
-      .the((dbProduct) => {
-        res.json(dbProduct);
+      .then((dbProduct) => {
+        const result = gridDisplay(dbProduct);
+        res.render('products', { products: result });
       });
   });
 

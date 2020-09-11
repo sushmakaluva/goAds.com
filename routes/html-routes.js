@@ -10,8 +10,6 @@ module.exports = function (app) {
     res.render('subscription');
   });
 
-  
-
   app.get('/cart', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/cart.html'));
   });

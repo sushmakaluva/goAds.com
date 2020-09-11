@@ -111,10 +111,14 @@
                                     <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                         <li class="d-none d-xl-block col-lg-6">
                                             <div class="form-box f-right">
-                                                <input type="text" name="Search" placeholder="Search products" />
-                                                <div class="search-icon">
-                                                    <i class="fas fa-search special-tag"></i>
-                                                </div>
+                                                <form action="/search" id="search-form">
+                                                    <input type="text" name="keyword" id="searchKeyword"
+                                                        placeholder="Search products" />
+                                                    <div class="search-icon">
+                                                        <i class="fas fa-search special-tag"></i>
+                                                    </div>
+                                                </form>
+
                                             </div>
                                         </li>
                                         <li class="d-none d-xl-block">
@@ -267,6 +271,7 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/search.js"></script>
 </body>
 
 </html>
