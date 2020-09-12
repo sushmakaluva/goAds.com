@@ -19,7 +19,19 @@ module.exports = function (app) {
     app.get('/checkout', (req, res) => {
       res.render('checkout');
     });
+    
+    app.get('/confirmation', (req, res) => {
+      res.render('orderConfirmation');
+    });
 
+    app.get('/postAd', (req, res) => {
+      res.render('postAd');
+    });
+
+    app.get('/logIn', (req, res) => {
+      res.render('logIn');
+    });
+  
   
   app.get('/categories', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/categories.html'));
