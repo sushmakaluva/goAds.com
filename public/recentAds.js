@@ -18,15 +18,17 @@ $(document).ready(() => {
       imgTag.addClass('card-img-top');
       imgTag.attr('src', '/assets/img/gallery/dummy_pic.png');
       imgTag.appendTo(cardBodyDiv);
-      const pTag1 = $('<p>');
+      const pTag1 = $('<h5>');
       const pTag2 = $('<p>');
       pTag1.appendTo(cardBodyDiv);
       pTag2.appendTo(cardBodyDiv);
-      pTag1.addClass('card-text');
-      pTag2.addClass('card-text');
+      pTag1.addClass('product-caption');
+      // pTag2.addClass('card-text');
       pTag1.html(ad.product_name);
       pTag1.css('font-weight', 'bold');
-      pTag2.html(`${ad.price} CAD`);
+      pTag2.html(`${ad.price} CAD`).css('font-family', 'Poppins');
     });
   });
 });
+
+
