@@ -5,10 +5,11 @@
         {{#dataValues}}
         <div class="column card col-xl-3 m-4">
             <div class="card-body">
-                <p><span class="label"><b>Name :</b></span> {{this.product_name}}</p>
-                <p><span class="label"><b>Price :</b></span> {{this.price}} CAD</p>
+                <p><span id="itemName" class="label"><b>Name :</b></span> {{this.product_name}}</p>
+                <p><span id="itemPrice" class="label"><b>Price :</b></span> {{this.price}} CAD</p>
                 <p><span class="label"><b>Category :</b></span> {{this.category}}</p>
                 <p><span class="label"><b>Description :</b></span> {{this.description}}</p>
+                <button class="btn" onclick="sessionStorage.setItem($('#itemName').val(), $('#itemPrice').val())">Add to cart</button>
             </div>
         </div>
         {{/dataValues}}

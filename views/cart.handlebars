@@ -27,8 +27,8 @@
               <tr>
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                {{!-- <th scope="col">Quantity</th>
+                <th scope="col">Total</th> --}}
               </tr>
             </thead>
             <tbody>
@@ -36,17 +36,17 @@
                 <td>
                   <div class="media">
                     <div class="d-flex">
-                      <img src="assets/img/arrivel/arrivel_1.png" alt="" />
+                      <img src="assets/img/arrivel/samsunggalaxy.jpg" alt="" />
                     </div>
                     <div class="media-body">
-                      <p>Name of Item</p>
+                      <p>Samsung Galaxy S10+</p>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <h5>$36.00</h5>
+                  <h5>CAD $979.99</h5>
                 </td>
-                <td>
+                {{!-- <td>
                   <div class="product_count">
                     <!-- <input type="text" value="1" min="0" max="10" title="Quantity:"
                       class="input-text qty input-number" />
@@ -62,10 +62,10 @@
                     <input class="input-number" type="text" value="1" min="0" max="10">
                     <span class="input-number-increment"> <i class="ti-plus"></i></span>
                   </div>
-                </td>
-                <td>
+                </td> --}}
+                {{!-- <td>
                   <h5>$36.00</h5>
-                </td>
+                </td> --}}
                  <td>
                   <a href="#" style="color: red; text-decoration: underline;">Remove</a>
                 </td>
@@ -74,27 +74,28 @@
                 <td>
                   <div class="media">
                     <div class="d-flex">
-                      <img src="assets/img/arrivel/arrivel_2.png" alt="" />
+                      <img src="assets/img/arrivel/windowstablet.jpg" alt="" />
                     </div>
                     <div class="media-body">
-                      <p>Name of Item</p>
+                      <p>
+Surface Go 2 - Wi Fi, Intel Pentium 4425Y, 4GB, 64GB</p>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <h5>$60.00</h5>
+                  <h5>CAD $529.00</h5>
                 </td>
                 
-                <td>
+                {{!-- <td>
                   <div class="product_count">
                       <span class="input-number-decrement"> <i class="ti-minus"></i></span>
                       <input class="input-number" type="text" value="1" min="0" max="10">
                       <span class="input-number-increment"> <i class="ti-plus"></i></span>
                   </div>
-                </td>
-                <td>
-                  <h5>$60.00</h5>
-                </td>
+                </td> --}}
+                {{!-- <td>
+                  <h5>CAD $529.00</h5>
+                </td> --}}
                 <td>
                   <a href="#" style="color: red; text-decoration: underline;">Remove</a>
                 </td>
@@ -102,7 +103,7 @@
             
               <tr>
                 <td></td>
-                <td></td>
+                
                 <td>
                   <h5>Subtotal</h5>
                 </td>
@@ -112,10 +113,11 @@
               </tr>
               <tr class="shipping_area">
                 <td></td>
-                <td></td>
+                
                 <td>
                   <h5>Shipping</h5>
                 </td>
+                
                 <td>
                   <div class="shipping_box">
                     <ul class="list">
@@ -146,3 +148,83 @@
       </div>
   </section>
   <!--================End Cart Area =================--> 
+
+  {{!-- <form name="ShoppingList">
+    <fieldset>
+        <legend>Shopping cart</legend>
+        <label>Item: <input type="text" id="item" name="name"></label>
+        <label>Price: <input type="text" id="price" name="data"></label>
+
+        <button data-number="10" type="button" class="btn btn-primary btn-save2" onclick="sessionStorage.setItem($('#item').val(), $('#price').val()); console.log('item saved')">Save</button>
+        <input type="button" value="Update" onclick="ModifyItem()">
+        <input type="button" value="Delete" onclick="RemoveItem()">
+    </fieldset>
+    <div id="items_table">
+        <h2>Shopping List</h2>
+        <table id="list"></table>
+        <label><input type="button" value="Clear" onclick="ClearAll()">
+        * Delete all items</label>
+    </div>
+</form> --}}
+
+
+<script>
+$(window).load(function() {
+  doShowAll();
+});
+
+var saveItem = function {
+  sessionStorage.setItem('test', 24)
+    {{!-- var currentSaveBtn = $(this).attr("data-number")
+    console.log("save button clicked")
+    input = $("#" + currentSaveBtn)
+    console.log(input.val())
+    sessionStorage.setItem("item", input.val());
+    console.log(currentTime) --}}
+}
+
+// Dynamically populate the table with shopping list items.
+//Step below can be done via PHP and AJAX, too.
+function doShowAll() {
+    if (CheckBrowser()) {
+        var key = "";
+        var list = "<tr><th>Item</th><th>Value</th></tr>\n";
+        var i = 0;
+        //For a more advanced feature, you can set a cap on max items in the cart.
+        for (i = 0; i <= localStorage.length-1; i++) {
+            key = localStorage.key(i);
+            list += "<tr><td>" + key + "</td>\n<td>"
+                    + localStorage.getItem(key) + "</td></tr>\n";
+        }
+        //If no item exists in the cart.
+        if (list == "<tr><th>Item</th><th>Value</th></tr>\n") {
+            list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+        }
+        //Bind the data to HTML table.
+        //You can use jQuery, too.
+        $(‘#list’).html()=list;
+    } else {
+        alert('Cannot save shopping list as your browser does not support HTML 5');
+    }
+}
+
+localStorage.setItem('propertyName','value');
+localStorage.getItem('propertyName');
+localStorage.removeItem('propertyName');
+
+function SaveItem() {
+  console.log("save item clicked")
+    var name = $("#name").val();
+    var data = $("#data").val();
+    localStorage.setItem(name, data);
+    doShowAll();
+}
+function RemoveItem()
+{
+var name=document.forms.ShoppingList.name.value;
+document.forms.ShoppingList.data.value=localStorage.removeItem(name);
+doShowAll();
+}
+
+
+</script>

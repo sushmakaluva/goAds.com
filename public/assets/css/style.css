@@ -11998,21 +11998,21 @@ input:focus {
 .login_part .login_part_text {
   background-image: -moz-linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+    #ece05d 0%,
+    #ece05d 64%,
+    #ece05d 100%
   );
   background-image: -webkit-linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+    #ece05d 0%,
+    #ece05d 64%,
+    #ece05d 100%
   );
   background-image: linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+    #ece05d 0%,
+    #ece05d 64%,
+    #f0e249 100%
   );
   background-size: 200% auto;
 }
