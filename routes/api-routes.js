@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../models');
-
+console.log(db)
 module.exports = function (app) {
   // Get route for returning products which have deals
   app.get('/deals', (req, res) => {
@@ -40,18 +40,18 @@ module.exports = function (app) {
       });
   });
 
-  //  // POST route for ADD TO CART
-  //  app.post('/api/cart', (req, res) => {
-  //   console.log(req.body);
-  //   db.Cart.create({
-  //     product_name: req.body.product_name,
-  //     price: req.body.price,
+   // POST route for ADD TO CART
+   app.post('/api/cart', (req, res) => {
+    console.log(req.body);
+    db.Cart.create({
+      product_name: req.body.product_name,
+      price: req.body.price,
       
-  //   })
-  //     .then((dbCart) => {
-  //       res.json(dbCart);
-  //     });
-  // });
+    })
+      .then((dbCart) => {
+        res.json(dbCart);
+      });
+  });
 
   // // DELETE route for deleting PRODUCTS FROM CART
   // app.delete('/api/cart/:product_id', (req, res) => {
@@ -71,6 +71,7 @@ module.exports = function (app) {
       })
         .then((dbCart) => {
           res.json(dbCart);
+          res.render('cart', { cartItems: dbCart })
         });
     });
     

@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     const Cart = sequelize.define('Cart',
       {
-        product_id: {
+        cart_id: {
           type: DataTypes.INTEGER,
           primaryKey: true,
           autoIncrement: true,
