@@ -40,17 +40,51 @@ module.exports = function (app) {
       });
   });
 
-  // DELETE route for deleting products from cart
-  app.delete('/api/products/:product_id', (req, res) => {
-    db.Products.destroy({
-      where: {
-        product_id: req.params.product_id,
-      },
-    })
-      .then((dbProduct) => {
-        res.json(dbProduct);
-      });
-  });
+  //  // POST route for ADD TO CART
+  //  app.post('/api/cart', (req, res) => {
+  //   console.log(req.body);
+  //   db.Cart.create({
+  //     product_name: req.body.product_name,
+  //     price: req.body.price,
+      
+  //   })
+  //     .then((dbCart) => {
+  //       res.json(dbCart);
+  //     });
+  // });
+
+  // // DELETE route for deleting PRODUCTS FROM CART
+  // app.delete('/api/cart/:product_id', (req, res) => {
+  //   db.Cart.destroy({
+  //     where: {
+  //       product_id: req.params.product_id,
+  //     },
+  //   })
+  //     .then((dbCart) => {
+  //       res.json(dbCart);
+  //     });
+  // });
+
+  // GET ROUTE FOR DISPLAYING ALL ITEMS IN CART
+  app.get('/api/cart', (req, res) => {
+      db.Cart.findAll({
+      })
+        .then((dbCart) => {
+          res.json(dbCart);
+        });
+    });
+    
+  //   // FIND ONE PRODUCT IN CART
+  //   app.get('/api/cart/:product_id', (req, res) => {
+  //     db.Cart.findOne({
+  //       where: {
+  //         product_id: req.params.product_id,
+  //       },
+  //     })
+  //       .then((dbCart) => {
+  //         res.json(db);
+  //       });
+  //   });
 
   // GET route to display all the products based on category
   app.get('/products', (req, res) => {
