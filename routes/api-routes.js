@@ -13,7 +13,7 @@ module.exports = function (app) {
       });
   });
 
-  // GET route for retrieving a single product
+  // GET route for retrieving a single product (not used)
   app.get('/api/products/:product_id', (req, res) => {
     db.Products.findOne({
       where: {
@@ -94,7 +94,7 @@ module.exports = function (app) {
       });
   });
 
-  // GET route
+  // GET route for search keyword
   app.get('/search', (req, res) => {
     console.log(req.query);
     db.Products.findAll({
