@@ -5,7 +5,7 @@
         {{#dataValues}}
         <div class="column card col-xl-3 m-4">
             <div class="card-body">
-                <p><span id="itemName" class="label"><b>Name :</b></span> {{this.product_name}}</p>
+                <p><span id="itemName" class="label"><b>Name :</b></span> {{this.product_name}}</p>1
                 <p><span id="itemPrice" class="label"><b>Price :</b></span> $ {{this.price}} CAD</p>
                 <p><span class="label"><b>Category :</b></span> {{this.category}}</p>
                 <p><span class="label"><b>Description :</b></span> {{this.description}}</p>
@@ -18,28 +18,4 @@
     {{/each}}
 </div>
 
-<script>
-
-    $("#addToCart").on("click", function(){
-        //get the input value
-        itemName = $('#itemName').val();
-        itemPrice = $('#itemPrice').val();
-        $.post("/api/cart",
- 
-            {
-                product_name : itemName,
-               
-                price : itemPrice
-                },
-      
-            //on success
-            success: function(data){
-                console.log("Item had successfully been added to cart!")
-            },
-            //on error
-            error: function(){
-                console.log("Item has not been added to cart!")
-            }
-        });
-    }
-</script>
+<script src='/public/add-to-cart.js'></script>
