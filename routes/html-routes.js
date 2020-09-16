@@ -10,8 +10,6 @@ module.exports = function (app) {
     res.render('subscription');
   });
 
-
-
   app.get('/cart', (req, res) => {
     res.render('cart');
   });

@@ -25,8 +25,10 @@ $(document).ready(() => {
       pTag1.addClass('product-caption');
       // pTag2.addClass('card-text');
       pTag1.html(ad.product_name);
+      pTag1.css('text-align', 'center');
       pTag1.css('font-weight', 'bold');
       pTag2.html(`$ ${ad.price} CAD`).css('font-family', 'Poppins');
+      pTag2.css('text-align', 'center');
     });
   });
 });
