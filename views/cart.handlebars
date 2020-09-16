@@ -27,24 +27,26 @@
               <tr>
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
-                {{!-- <th scope="col">Quantity</th>
-                <th scope="col">Total</th> --}}
+              
               </tr>
             </thead>
             <tbody>
+              {{#each cartItems}}
+                
+        
               <tr>
                 <td>
                   <div class="media">
-                    <div class="d-flex">
+                    {{!-- <div class="d-flex">
                       <img src="assets/img/arrivel/samsunggalaxy.jpg" alt="" />
-                    </div>
+                    </div> --}}
                     <div class="media-body">
-                      <p>Samsung Galaxy S10+</p>
+                      <p>{{this.product_name}}</p>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <h5>CAD $979.99</h5>
+                  <h5> ${{this.price}} CAD</h5>
                 </td>
                 {{!-- <td>
                   <div class="product_count">
@@ -67,10 +69,14 @@
                   <h5>$36.00</h5>
                 </td> --}}
                  <td>
-                  <a href="#" style="color: red; text-decoration: underline;">Remove</a>
+                  <a href="#" onclick="removeData('{{this.cart_id}}')" style="color: red; text-decoration: underline;">Remove</a>
                 </td>
+         {{/each}}
               </tr>
-              <tr>
+
+               
+       
+              {{!-- <tr>
                 <td>
                   <div class="media">
                     <div class="d-flex">
@@ -96,10 +102,7 @@ Windows Surface Go 2 </p>
                 {{!-- <td>
                   <h5>CAD $529.00</h5>
                 </td> --}}
-                <td>
-                  <a href="#" style="color: red; text-decoration: underline;">Remove</a>
-                </td>
-              </tr>
+                 --}}
             
               <tr>
                 <td></td>
@@ -149,22 +152,23 @@ Windows Surface Go 2 </p>
   </section>
   <!--================End Cart Area =================--> 
 
-  {{!-- <form name="ShoppingList">
-    <fieldset>
-        <legend>Shopping cart</legend>
-        <label>Item: <input type="text" id="item" name="name"></label>
-        <label>Price: <input type="text" id="price" name="data"></label>
 
-        <button data-number="10" type="button" class="btn btn-primary btn-save2" onclick="sessionStorage.setItem($('#item').val(), $('#price').val()); console.log('item saved')">Save</button>
-        <input type="button" value="Update" onclick="ModifyItem()">
-        <input type="button" value="Delete" onclick="RemoveItem()">
-    </fieldset>
-    <div id="items_table">
-        <h2>Shopping List</h2>
-        <table id="list"></table>
-        <label><input type="button" value="Clear" onclick="ClearAll()">
-        * Delete all items</label>
-    </div>
-</form> --}}
+<script>
 
+function removeData (cartId) {
+  const queryUrl = "/api/cart/" + cartId
+  $.ajax({
+    url: queryUrl,
+    type: 'DELETE',
+    success: function(result) {
+        // Do something with the result
+        console.log("Item has been removed from cart!")
+    },
+    error: function(data){
+                console.log(data)
+            }
+      
+});
+}
 
+</script>

@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../models');
-console.log(db)
+
 module.exports = function (app) {
   // Get route for returning products which have deals
   app.get('/deals', (req, res) => {
@@ -53,24 +53,24 @@ module.exports = function (app) {
       });
   });
 
-  // // DELETE route for deleting PRODUCTS FROM CART
-  // app.delete('/api/cart/:product_id', (req, res) => {
-  //   db.Cart.destroy({
-  //     where: {
-  //       product_id: req.params.product_id,
-  //     },
-  //   })
-  //     .then((dbCart) => {
-  //       res.json(dbCart);
-  //     });
-  // });
+  // DELETE route for deleting PRODUCTS FROM CART
+  app.delete('/api/cart/:cart_id', (req, res) => {
+    db.Cart.destroy({
+      where: {
+        cart_id: req.params.cart_id,
+      },
+    })
+      .then((dbCart) => {
+        res.json(dbCart);
+      }).catch((error) => res.json(error))
+  });
 
   // GET ROUTE FOR DISPLAYING ALL ITEMS IN CART
-  app.get('/api/cart', (req, res) => {
-      db.Cart.findAll({
+  app.get('/cart', (req, res) => {
+      db.Cart.findAll({raw : true
       })
         .then((dbCart) => {
-          res.json(dbCart);
+          console.log(dbCart[0])
           res.render('cart', { cartItems: dbCart })
         });
     });
@@ -135,7 +135,7 @@ module.exports = function (app) {
         },
       },
     })
-      .the((dbProduct) => {
+      .then((dbProduct) => {
         res.json(dbProduct);
       });
   });

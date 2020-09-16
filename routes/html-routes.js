@@ -31,7 +31,9 @@ module.exports = function (app) {
     app.get('/logIn', (req, res) => {
       res.render('logIn');
     });
-  
+    app.get('/contact', (req, res) => {
+      res.render('contact');
+    });
   
   app.get('/categories', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/categories.html'));
