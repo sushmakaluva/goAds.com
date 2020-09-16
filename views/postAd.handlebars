@@ -1,58 +1,100 @@
 <main>
-      <div class="container page-wrapper">
-        <h1>Admin Page</h1>
-        <hr>
-        <div class="row">
-          <div class="col-3">
-            <div class="card">
-              <div class="card-block">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Post an Ad</a>
-                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">My Ads</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-9">
-            <div class="card">
-              <div class="card-block page-wrapper">
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><div class="page-wrapper">
-                    <h2>Create Post</h2>
-                    <form action="">
-                      <div class="form-group">
-                        <label for="create-title">Title</label>
-                        <input type="text" class="form-control" id="create-title" placeholder="Title">
-                      </div>
-                      <div class="form-group">
-                        <label for="create-location">Location</label>
-                        <input type="text" class="form-control" id="create-location" placeholder="Location">
-                      </div>
-                      <div class="form-group">
-                        <label for="create-image-url">Image</label>
-                        <input type="text" class="form-control" id="create-image-url" placeholder="URL">
-                        <p>or</p>
-                        <input type="file" class="form-control-file form-control" id="create-image-file">
-                      </div>
-                      <div class="form-group">
-                        <label for="create-description">Description</label>
-                        <textarea class="form-control" id="create-description" rows="5"></textarea>
-                      </div>
-                      <button class="btn btn-primary">Create Post</button>
-                    </form>
-                  </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Mails</div>
-                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Callback Requests</div>
-                </div>
-                
-                
-                  </div>
-                </div>
-              </div>
+  <div class="container page-wrapper">
+    <h1>Admin Page</h1>
+    <hr>
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <div class="card-block">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                aria-controls="v-pills-home" aria-selected="true">Post an Ad</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                aria-controls="v-pills-profile" aria-selected="false">My Ads</a>
+
             </div>
           </div>
         </div>
       </div>
-    </main>
+      <div class="col-9">
+        <div class="card">
+          <div class="card-block page-wrapper">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <div class="page-wrapper">
+                  <h2>Create Post</h2>
+                  <form action="">
+                    <div class="form-group">
+                      <label for="product-name">Enter name of the Product :</label>
+                      <input type="text" class="form-control" id="product-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Enter the Price :</label>
+                      <input type="text" class="form-control" id="price">
+                    </div>
+                    <div class="form-group">
+                      <label for="category">Choose a Category :</label>
+                      <br>
+                      {{!-- <input type="text" class="form-control" id="category"> --}}
+                      <select id="category" class="form-control" name="category">
+                        <option value="Electronics">Electronics</option>
+                        <option value="Mobiles">Mobiles</option>
+                        <option value="Appliances">Appliances</option>
+                      </select>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                      <label for="create-image-url">Upload an Image :</label>
+                      <input type="text" class="form-control" id="create-image-url" placeholder="URL">
+                      <p>or</p>
+                      <input type="file" class="form-control-file form-control" id="create-image-file">
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description :</label>
+                      <textarea class="form-control" id="description" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="post-btn">Create Post</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    $('#post-btn').click(function () {
+      const product_name = $('#product-name').val();
+      const price = $('#price').val();
+      const category = $('#category option:selected').text();
+      const description = $('#description').val();
+
+      $.ajax({
+        url: "/api/postAd",
+        data:
+        {
+          product_name: product_name,
+          price: price,
+          category: category,
+          description: description
+        },
+        type: "POST",
+        dataType: "json",
+        //on success
+        success: function (data) {
+          console.log("Item has been successfully posted!")
+        },
+        //on error
+        error: function () {
+          console.log("Item has not been posted!")
+        }
+      });
+    })
+  </script>
+</main>

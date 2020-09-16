@@ -10,29 +10,29 @@ module.exports = function (app) {
     res.render('subscription');
   });
 
-  
+
 
   app.get('/cart', (req, res) => {
-      res.render('cart');
-    });
+    res.render('cart');
+  });
 
-    app.get('/checkout', (req, res) => {
-      res.render('checkout');
-    });
-    
-    app.get('/confirmation', (req, res) => {
-      res.render('orderConfirmation');
-    });
+  app.get('/checkout', (req, res) => {
+    res.render('checkout');
+  });
 
-    app.get('/postAd', (req, res) => {
-      res.render('postAd');
-    });
+  app.get('/confirmation', (req, res) => {
+    res.render('orderConfirmation');
+  });
 
-    app.get('/logIn', (req, res) => {
-      res.render('logIn');
-    });
-  
-  
+  app.get('/api/postAd', (req, res) => {
+    res.render('postAd');
+  });
+
+  app.get('/logIn', (req, res) => {
+    res.render('logIn');
+  });
+
+
   app.get('/categories', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/categories.html'));
   });

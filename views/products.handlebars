@@ -19,38 +19,34 @@
 </div>
 
 <script>
-
-
-    function sendData(itemName, itemPrice){
+    function sendData(itemName, itemPrice) {
         //get the input value
         //itemName = $('#itemName').html();
         //itemPrice = $('#itemPrice').html()
-        
-          $.ajax({
+
+        $.ajax({
             //the url to send the data to
             url: "/api/cart",
             //the data to send to
-            data: 
+            data:
             {
-                product_name : itemName,
-                 
-                
-                price : itemPrice
-                },
+                product_name: itemName,
+                price: itemPrice
+            },
             //type. for eg: GET, POST
             type: "POST",
             //datatype expected to get in reply form server
             dataType: "json",
             //on success
-         success: function(data){
+            success: function (data) {
                 console.log("Item has successfully been added to cart!")
             },
             //on error
-            error: function(){
+            error: function () {
                 console.log("Item has not been added to cart!")
             }
-      
-        
+
+
         });
     }
 </script>

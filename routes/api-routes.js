@@ -27,7 +27,7 @@ module.exports = function (app) {
   });
 
   // POST route for saving a new product
-  app.post('/api/sell', (req, res) => {
+  app.post('/api/postAd', (req, res) => {
     console.log(req.body);
     db.Products.create({
       product_name: req.body.product_name,
@@ -36,17 +36,18 @@ module.exports = function (app) {
       description: req.body.description,
     })
       .then((dbProduct) => {
+        console.log(dbProduct);
         res.json(dbProduct);
       });
   });
 
-   // POST route for ADD TO CART
-   app.post('/api/cart', (req, res) => {
+  // POST route for ADD TO CART
+  app.post('/api/cart', (req, res) => {
     console.log(req.body);
     db.Cart.create({
       product_name: req.body.product_name,
       price: req.body.price,
-      
+
     })
       .then((dbCart) => {
         res.json(dbCart);
@@ -67,14 +68,14 @@ module.exports = function (app) {
 
   // GET ROUTE FOR DISPLAYING ALL ITEMS IN CART
   app.get('/api/cart', (req, res) => {
-      db.Cart.findAll({
-      })
-        .then((dbCart) => {
-          res.json(dbCart);
-          res.render('cart', { cartItems: dbCart })
-        });
-    });
-    
+    db.Cart.findAll({
+    })
+      .then((dbCart) => {
+        res.json(dbCart);
+        res.render('cart', { cartItems: dbCart })
+      });
+  });
+
   //   // FIND ONE PRODUCT IN CART
   //   app.get('/api/cart/:product_id', (req, res) => {
   //     db.Cart.findOne({
