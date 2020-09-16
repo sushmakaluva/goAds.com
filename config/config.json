@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Jadcherla.1",
-    "database": "classifieds_db",
+    "password": "Kasagh10",
+    "database": "login_password",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
