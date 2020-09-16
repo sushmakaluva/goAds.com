@@ -1,7 +1,25 @@
 const Sequelize = require('sequelize');
+const fs = require('fs');
 const db = require('../models');
-console.log(db)
-module.exports = function (app) {
+const multerUpload = require('../middleware/upload');
+
+function gridDisplay(dbProducts) {
+  const result = [];
+  let temp = [];
+  for (let i = 0; i < dbProducts.length; i += 1) {
+    temp.push(dbProducts[i]);
+    if (temp.length === 3) {
+      result.push(temp);
+      temp = [];
+    }
+  }
+  if (temp.length > 0) {
+    result.push(temp);
+  }
+  return result;
+}
+
+module.exports = (app) => {
   // Get route for returning products which have deals
   app.get('/deals', (req, res) => {
     db.Products.findAll({
@@ -26,23 +44,26 @@ module.exports = function (app) {
   });
 
   // POST route for saving a new product
-  app.post('/api/postAd', (req, res) => {
-    console.log(req.body);
+  app.post('/api/postAd', multerUpload.single('image'), (req, res) => {
+    const imgData = Buffer.from(fs.readFileSync(req.file.path)).toString('base64');
     db.Products.create({
       product_name: req.body.product_name,
       price: req.body.price,
       category: req.body.category,
       description: req.body.description,
+      img_data: imgData,
+      img_url: req.body.img_url,
     })
       .then((dbProduct) => {
-        console.log(dbProduct);
         res.json(dbProduct);
+      })
+      .catch((err) => {
+        res.json({ error: err.message });
       });
   });
 
   // POST route for ADD TO CART
   app.post('/api/cart', (req, res) => {
-    console.log(req.body);
     db.Cart.create({
       product_name: req.body.product_name,
       price: req.body.price,
@@ -71,7 +92,7 @@ module.exports = function (app) {
     })
       .then((dbCart) => {
         res.json(dbCart);
-        res.render('cart', { cartItems: dbCart })
+        res.render('cart', { cartItems: dbCart });
       });
   });
 
@@ -103,21 +124,7 @@ module.exports = function (app) {
       });
   });
 
-  function gridDisplay(dbProducts) {
-    const result = [];
-    let temp = [];
-    for (let i = 0; i < dbProducts.length; i++) {
-      temp.push(dbProducts[i]);
-      if (temp.length === 3) {
-        result.push(temp);
-        temp = [];
-      }
-    }
-    if (temp.length > 0) {
-      result.push(temp);
-    }
-    return result;
-  }
+
 
   // GET route to display recent Ads
   app.get('/api/recent-ads', (req, res) => {
@@ -132,7 +139,6 @@ module.exports = function (app) {
 
   // GET route for search keyword
   app.get('/search', (req, res) => {
-    console.log(req.query);
     db.Products.findAll({
       limit: 10,
       where: {

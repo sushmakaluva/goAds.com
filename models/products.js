@@ -1,3 +1,9 @@
+const fs = require('fs');
+
+function readImageData(path) {
+  return Buffer.from(fs.readFileSync(path)).toString('base64');
+}
+
 module.exports = function (sequelize, DataTypes) {
   const Products = sequelize.define('Products',
     {
@@ -27,6 +33,9 @@ module.exports = function (sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      img_data: {
+        type: DataTypes.BLOB('long'),
+      },
     },
     {
       freezeTableName: true,
@@ -38,6 +47,7 @@ module.exports = function (sequelize, DataTypes) {
       price: 599,
       category: 'Electronics',
       description: 'Touchscreen, Wireless Bluetooth, Chrome OS',
+      img_data: readImageData(`${__dirname}/../public/assets/img/addToCart.jpg`),
     },
     {
       product_name: 'Dell Latitude D610',
@@ -108,3 +118,5 @@ module.exports = function (sequelize, DataTypes) {
   ], { ignoreDuplicates: true });
   return Products;
 };
+
+

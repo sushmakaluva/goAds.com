@@ -16,14 +16,13 @@ $(document).ready(() => {
       cardBodyDiv.addClass('card-body');
       const imgTag = $('<img>');
       imgTag.addClass('card-img-top');
-      imgTag.attr('src', '/assets/img/gallery/dummy_pic.png');
+      imgTag.attr('src', `data:image/png;base64,${ad.img_data}`);
       imgTag.appendTo(cardBodyDiv);
       const pTag1 = $('<h5>');
       const pTag2 = $('<p>');
       pTag1.appendTo(cardBodyDiv);
       pTag2.appendTo(cardBodyDiv);
       pTag1.addClass('product-caption');
-      // pTag2.addClass('card-text');
       pTag1.html(ad.product_name);
       pTag1.css('text-align', 'center');
       pTag1.css('font-weight', 'bold');
@@ -32,5 +31,3 @@ $(document).ready(() => {
     });
   });
 });
-
-

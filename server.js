@@ -1,6 +1,5 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-
 const db = require('./models');
 
 // Sets up the Express App
@@ -16,7 +15,6 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Set Handlebars as the default templating engine.
-app.engine('handlebars', exphbs({ helpers: { json: function (context) { return JSON.stringify(context); } } }));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 

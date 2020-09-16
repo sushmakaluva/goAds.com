@@ -5,7 +5,8 @@
         {{#dataValues}}
         <div class="column card col-xl-3 m-4">
             <div class="card-body">
-                <p><span id="itemName" class="label"><b>Name :</b></span> {{this.product_name}}</p>
+                <p><img style="width:100%;height:100%;" src="data:image/png;base64,{{this.img_data}}" /> </p>
+                <p><span id=" itemName" class="label"><b>Name :</b></span> {{this.product_name}}</p>
                 <p><span id="itemPrice" class="label"><b>Price :</b></span> $ {{this.price}} CAD</p>
                 <p><span class="label"><b>Category :</b></span> {{this.category}}</p>
                 <p><span class="label"><b>Description :</b></span> {{this.description}}</p>
@@ -17,36 +18,3 @@
     </div>
     {{/each}}
 </div>
-
-<script>
-    function sendData(itemName, itemPrice) {
-        //get the input value
-        //itemName = $('#itemName').html();
-        //itemPrice = $('#itemPrice').html()
-
-        $.ajax({
-            //the url to send the data to
-            url: "/api/cart",
-            //the data to send to
-            data:
-            {
-                product_name: itemName,
-                price: itemPrice
-            },
-            //type. for eg: GET, POST
-            type: "POST",
-            //datatype expected to get in reply form server
-            dataType: "json",
-            //on success
-            success: function (data) {
-                console.log("Item has successfully been added to cart!")
-            },
-            //on error
-            error: function () {
-                console.log("Item has not been added to cart!")
-            }
-
-
-        });
-    }
-</script>

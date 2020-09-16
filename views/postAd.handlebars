@@ -24,10 +24,10 @@
                 aria-labelledby="v-pills-home-tab">
                 <div class="page-wrapper">
                   <h2>Create Post</h2>
-                  <form action="">
+                  <form id="uploadForm" enctype="multipart/form-data">
                     <div class="form-group">
-                      <label for="product-name">Enter name of the Product :</label>
-                      <input type="text" class="form-control" id="product-name">
+                      <label for="product_name">Enter name of the Product :</label>
+                      <input type="text" class="form-control" id="product_name">
                     </div>
                     <div class="form-group">
                       <label for="price">Enter the Price :</label>
@@ -49,13 +49,13 @@
                       <label for="create-image-url">Upload an Image :</label>
                       <input type="text" class="form-control" id="create-image-url" placeholder="URL">
                       <p>or</p>
-                      <input type="file" class="form-control-file form-control" id="create-image-file">
+                      <input type="file" class="form-control-file form-control" name="image" id="image">
                     </div>
                     <div class="form-group">
                       <label for="description">Description :</label>
                       <textarea class="form-control" id="description" rows="5"></textarea>
                     </div>
-                    <button class="btn btn-primary" id="post-btn">Create Post</button>
+                    <input type="submit" class="btn btn-primary" id="post-btn" value="Create Post"></input>
                   </form>
                 </div>
               </div>
@@ -67,34 +67,6 @@
     </div>
   </div>
   </div>
-
-  <script>
-    $('#post-btn').click(function () {
-      const product_name = $('#product-name').val();
-      const price = $('#price').val();
-      const category = $('#category option:selected').text();
-      const description = $('#description').val();
-
-      $.ajax({
-        url: "/api/postAd",
-        data:
-        {
-          product_name: product_name,
-          price: price,
-          category: category,
-          description: description
-        },
-        type: "POST",
-        dataType: "json",
-        //on success
-        success: function (data) {
-          console.log("Item has been successfully posted!")
-        },
-        //on error
-        error: function () {
-          console.log("Item has not been posted!")
-        }
-      });
-    })
-  </script>
 </main>
+
+<script src="../postAd.js"></script>

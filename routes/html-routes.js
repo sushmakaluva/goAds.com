@@ -1,4 +1,5 @@
 const path = require('path');
+const upload = require('../middleware/upload');
 
 module.exports = function (app) {
   // index route loads view.html
@@ -22,14 +23,13 @@ module.exports = function (app) {
     res.render('orderConfirmation');
   });
 
-  app.get('/api/postAd', (req, res) => {
+  app.get('/postAd', (req, res) => {
     res.render('postAd');
   });
 
   app.get('/logIn', (req, res) => {
     res.render('logIn');
   });
-
 
   app.get('/categories', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/categories.html'));

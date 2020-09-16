@@ -4,16 +4,16 @@ const imageFilter = (req, file, cb) => {
   if (file.mimetype.startsWith('image')) {
     cb(null, true);
   } else {
-    cb('Please upload only images.', false);
+    cb(new Error('Please upload only images'));
   }
 };
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, `${__basedir}/resources/static/assets/uploads/`);
+    cb(null, `${__dirname}/../public/assets/uploads/`);
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-bezkoder-${file.originalname}`);
+    cb(null, `${Date.now()}-${file.originalname}`);
   },
 });
 
