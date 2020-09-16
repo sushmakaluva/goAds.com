@@ -27,11 +27,11 @@
                   <form id="uploadForm" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="product_name">Enter name of the Product :</label>
-                      <input type="text" class="form-control" id="product_name">
+                      <input type="text" class="form-control" name="product_name" id="product_name">
                     </div>
                     <div class="form-group">
                       <label for="price">Enter the Price :</label>
-                      <input type="text" class="form-control" id="price">
+                      <input type="text" class="form-control" name="price" id="price">
                     </div>
                     <div class="form-group">
                       <label for="category">Choose a Category :</label>
@@ -47,13 +47,11 @@
                     <br>
                     <div class="form-group">
                       <label for="create-image-url">Upload an Image :</label>
-                      <input type="text" class="form-control" id="create-image-url" placeholder="URL">
-                      <p>or</p>
                       <input type="file" class="form-control-file form-control" name="image" id="image">
                     </div>
                     <div class="form-group">
                       <label for="description">Description :</label>
-                      <textarea class="form-control" id="description" rows="5"></textarea>
+                      <textarea class="form-control" name="description" id="description" rows="5"></textarea>
                     </div>
                     <input type="submit" class="btn btn-primary" id="post-btn" value="Create Post"></input>
                   </form>

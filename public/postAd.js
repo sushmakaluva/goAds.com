@@ -1,22 +1,22 @@
-$(document).ready((e) => {
-  $('#uploadForm').submit(function () {
+$(document).ready(() => {
+  $('#uploadForm').submit((e) => {
     e.preventDefault();
 
-    const product_name = $('#product_name').val();
-    const price = $('#price').val();
-    const category = $('#category option:selected').text();
-    const description = $('#description').val();
-    const image = $('#image').val();
+    const form = $('#uploadForm')[0];
+    const formData = new FormData(form);
+    console.log(formData);
 
     $.ajax({
-      url: '/api/postAd',
-      data: new FormData(this),
       type: 'POST',
-      // on success
+      enctype: 'multipart/form-data',
+      processData: false,
+      contentType: false,
+      cache: false,
+      url: '/api/postAd',
+      data: formData,
       success(data) {
-        console.log('Item has been successfully posted!');
+        console.log('Item has been successfully posted!', data);
       },
-      // on error
       error() {
         console.log('Item has not been posted!');
       },

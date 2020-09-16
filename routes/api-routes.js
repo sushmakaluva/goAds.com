@@ -45,6 +45,8 @@ module.exports = (app) => {
 
   // POST route for saving a new product
   app.post('/api/postAd', multerUpload.single('image'), (req, res) => {
+    console.log(req.body);
+    console.log(req.file);
     const imgData = Buffer.from(fs.readFileSync(req.file.path)).toString('base64');
     db.Products.create({
       product_name: req.body.product_name,
