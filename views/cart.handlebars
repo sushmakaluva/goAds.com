@@ -162,6 +162,7 @@ Windows Surface Go 2 </p>
     });
   }
 
+<<<<<<< HEAD
   // calculating subtotal
 
 
@@ -195,5 +196,19 @@ sessionStorage.setItem("subTotal", JSON.stringify({{sum cartItems}})
   })
 
       });
+=======
+  // adding shipping selection to subtotal
+  function addToShipping(value) {
+    if (value == 8) {
+      subTotal + 8;
+      return subTotal
+      console.log(subTotal)
+    } else if (value == 15) {
+      subTotal + 15;
+      return subTotal
+      console.log(subTotal)
+    }
+  }
+>>>>>>> a3ba97d234777ca42f2b83ee5dfd878f557b9b2c
 
 </script>
