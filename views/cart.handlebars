@@ -110,9 +110,12 @@ Windows Surface Go 2 </p>
                 <td>
                   <h5>Subtotal</h5>
                 </td>
+            
+                {{#each cartItems}}
                 <td>
-                  <h5 id="subTotal"></h5>
-                </td>
+                  <h5>{{sum this}}</h5>
+                  </td>
+                {{/each}}
               </tr>
               <tr class="shipping_area">
                 <td></td>
@@ -165,6 +168,7 @@ function removeData (cartId) {
     success: function(result) {
         // Do something with the result
         console.log("Item has been removed from cart!")
+        window.location.href = "/cart"
     },
     error: function(data){
                 console.log(data)
@@ -175,14 +179,8 @@ function removeData (cartId) {
 
 // calculating subtotal
 
-  const subTotal = 0;
-            
-    //        for (let i = 0; i < cartItems.length; i++) {
-      //        subTotal + cartItems[i].price;
-        //      //$("#subTotal").html(subTotal)
-          //  console.log(subTotal)
-             
-           // }
+
+ 
 
 
 // adding shipping selection to subtotal
