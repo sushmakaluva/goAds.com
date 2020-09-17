@@ -116,12 +116,12 @@ Windows Surface Go 2 </p>
                     <ul class="list">
                       <li>
                        <label for="standardShipping"> Standard : $8.00 </label>
-                        <input type="radio" value="8" aria-label="Radio button for following text input" onclick="addToShipping(this.value);">
+                        <input type="radio" value="8" aria-label="Radio button for following text input" name="shipping" value="8">
                       </li>
                     
                       <li>
                         <label for="expressShipping"> Express : $15.00 </label>
-                        <input type="radio" value="15" aria-label="Radio button for following text input" onclick="addToShipping(this.value);">
+                        <input type="radio" value="15" aria-label="Radio button for following text input" name="shipping" value="15">
                       </li>
                      
                     </ul>
@@ -164,23 +164,22 @@ function removeData (cartId) {
 });
 }
 
-// calculating subtotal
-
-
- 
-
 
 // adding shipping selection to subtotal
-function addToShipping(value) {
-	if (value == 8) {
-	    subTotal + 8;
-      return subTotal
-      console.log(subTotal)
-	} else if (value == 15) {
-    subTotal + 15;
-      return subTotal
-      console.log(subTotal)
-  }
-}
+$(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var shippingValue = $("input[name='shipping']:checked").val();
+            if(shippingValue == 8){
+  let grandTotal = ""
+                grandTotal = {{sum cartItems}} + 8
+                console.log(grandTotal)
+
+            } else if (shippingValue == 15) {
+              let grandTotal = ""
+                grandTotal = {{sum cartItems}} + 15
+                console.log(grandTotal)
+            }
+        });
+    });
 
 </script>
