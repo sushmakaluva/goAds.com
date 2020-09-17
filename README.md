@@ -17,7 +17,7 @@ Our app is a simple alternative to all the confusing sites. A user can choose fr
 User can also sell a product by posting an ad.
 
 ## Logo Screenshot
-![flYjet Logo](assets/img/logo/logo_bottom.png)
+![goAds Logo](assets/img/logo/logo_bottom.png)
 
 ## Main Page Screenshot
 ![Main Page Screenshot](assets/website_mainpage.png?raw=true "Title")
