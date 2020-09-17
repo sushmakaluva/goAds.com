@@ -25,11 +25,11 @@ app.set('view engine', 'handlebars');
 var hbs = exphbs.create({});
 hbs.handlebars.registerHelper('sum', function (cartItems) {
   let s = 0;
-  for(let i=0; i<cartItems.length; i++) {
+  for (let i = 0; i < cartItems.length; i++) {
     s += cartItems[i].price;
   }
 
-  
+
   return s;
 })
 

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-8">
           <h3>Billing Details</h3>
-          <form class="needs-validation" action="/confirmation" method="GET">
+          <form class="needs-validation" action="/confirmation" method="GET" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -135,12 +135,12 @@
 
               <li>
                 <a href="#">{{this.product_name}}
-                  
+
                   <span class="last">${{this.price}} CAD</span>
                 </a>
               </li>
               {{/each}}
-              
+
             </ul>
             <ul class="list list_2">
               <li>
@@ -190,10 +190,10 @@
     }, false)
   }())
 
-var shipping= localStorage.getItem("Shipping")
-$("#selectedShipping").text(shipping)
+  var shipping = localStorage.getItem("Shipping")
+  $("#selectedShipping").text(shipping)
 
-var total= JSON.parse(localStorage.getItem("grandTotal"))
-$("#grandTotal").text(`$${total} CAD`)
+  var total = JSON.parse(localStorage.getItem("grandTotal"))
+  $("#grandTotal").text(`$${total} CAD`)
 
 </script>

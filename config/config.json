@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "12345678",
+    "password": "Jadcherla.1",
     "database": "classifieds_db",
     "host": "127.0.0.1",
     "port": 3306,
