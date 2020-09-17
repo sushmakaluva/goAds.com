@@ -6,6 +6,9 @@
 - Our app allows users to exchange goods and services.
 - This app is the perfect online marketplace to buy and sell products locally.
 
+## Mission statement
+goAds.com is continually striving to provide the highest quality online advertising services to businesses and individuals to serve local businesses and personal needs as well as opportunity for our customers, employees, community, and vendors through their growth of products and services.
+
 ## Products include :
 
 - Electronics
