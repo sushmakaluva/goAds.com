@@ -111,7 +111,7 @@ Windows Surface Go 2 </p>
                   <h5>Subtotal</h5>
                 </td>
                 <td>
-                  <h5></h5>
+                  <h5 id="subTotal"></h5>
                 </td>
               </tr>
               <tr class="shipping_area">
@@ -125,13 +125,13 @@ Windows Surface Go 2 </p>
                   <div class="shipping_box">
                     <ul class="list">
                       <li>
-                        Standard : $8.00
-                        <input type="radio" aria-label="Radio button for following text input">
+                       <label for="standardShipping"> Standard : $8.00 </label>
+                        <input type="radio" value="8" aria-label="Radio button for following text input" onclick="addToShipping(this.value);">
                       </li>
                     
                       <li>
-                        Express : $15.00
-                        <input type="radio" aria-label="Radio button for following text input">
+                        <label for="expressShipping"> Express : $15.00 </label>
+                        <input type="radio" value="15" aria-label="Radio button for following text input" onclick="addToShipping(this.value);">
                       </li>
                      
                     </ul>
@@ -155,6 +155,8 @@ Windows Surface Go 2 </p>
 
 <script>
 
+  // api call to delete item
+
 function removeData (cartId) {
   const queryUrl = "/api/cart/" + cartId
   $.ajax({
@@ -169,6 +171,31 @@ function removeData (cartId) {
             }
       
 });
+}
+
+// calculating subtotal
+
+  const subTotal = 0;
+            
+    //        for (let i = 0; i < cartItems.length; i++) {
+      //        subTotal + cartItems[i].price;
+        //      //$("#subTotal").html(subTotal)
+          //  console.log(subTotal)
+             
+           // }
+
+
+// adding shipping selection to subtotal
+function addToShipping(value) {
+	if (value == 8) {
+	    subTotal + 8;
+      return subTotal
+      console.log(subTotal)
+	} else if (value == 15) {
+    subTotal + 15;
+      return subTotal
+      console.log(subTotal)
+  }
 }
 
 </script>

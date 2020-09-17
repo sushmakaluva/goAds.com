@@ -49,20 +49,17 @@
         <div class="row">
           <div class="col-md-5 mb-3">
             <label for="country">Country</label>
-            <select class="custom-select d-block w-100" id="country" required>
-              <option value="">Choose...</option>
-              <option>United States</option>
-              <option>Canada</option>
-            </select>
+            <input type="text" class="form-control" id="country" placeholder="" value="" required>
+            
             <div class="invalid-feedback">
-              Please select a valid country.
+              Please enter a valid country.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">State/Province</label>
             <input type="text" class="form-control" id="state" placeholder="" value="" required>
             <div class="invalid-feedback">
-              Valid first name is required.
+              Valid state is required.
             </div>
           </div>
           <div class="col-md-3 mb-3">
@@ -79,7 +76,7 @@
 
         <div class="d-block my-3">
           <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" required>
             <label class="custom-control-label" for="credit">Credit card</label>
           </div>
           <div class="custom-control custom-radio">
@@ -122,7 +119,7 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>
+       <a href="/confirmation">  <button class="btn" type="submit"> Place Order</button></a>
       </form>
       
           </div>
@@ -163,8 +160,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">Grand Total
-                    <span>$111.00</span>
+                  <a href="#" >Grand Total
+                    <span id="grandTotal">$111.00</span>
                   </a>
                 </li>
               </ul>
@@ -190,10 +187,13 @@
           if (form.checkValidity() === false) {
             event.preventDefault()
             event.stopPropagation()
-          }
-          form.classList.add('was-validated')
+          } 
+          form.classList.add('was-validated');
+          window.location.href = "/confirmation" 
         }, false)
       })
     }, false)
   }())
+
+  $("#firstName").text("Faduma")
   </script>

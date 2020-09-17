@@ -70,7 +70,8 @@ module.exports = function (app) {
       db.Cart.findAll({raw : true
       })
         .then((dbCart) => {
-          console.log(dbCart[0])
+          
+          
           res.render('cart', { cartItems: dbCart })
         });
     });
