@@ -20,15 +20,15 @@ User can also sell a product by posting an ad.
 
 ## Logo Screenshot
 
-![Logo](/assets/img/logo/logo_bottom.png)
+![Logo](/public/assets/img/logo/logo_bottom.png)
 
 ## Main Page Screenshot
 
-![Screenshot](/assets/img/mainpage.png)
+![Screenshot](/public/assets/img/mainpage.png)
 
 ## Results Page Screenshot
 
-![Screenshot](/assets/img/resultspage.png)
+![Screenshot](/public/assets/img/resultspage.png)
 
 ## Features
 
