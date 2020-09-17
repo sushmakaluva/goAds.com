@@ -11,7 +11,7 @@ const lastName = $("#lastName").val()
 
 let date = moment().format("MMM Do YYYY");
 $("#Date").text(":  " + date)
-console.log(date)
+
 
 const Total = $("#grandTotal").val()
 
@@ -24,4 +24,3 @@ const country = $("#country").val()
 const state = $("#state").val()
 const zip = $("#zip").val()
 
-console.log(firstName)

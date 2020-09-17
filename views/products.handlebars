@@ -9,7 +9,7 @@
                 <p><span id="itemPrice" class="label"><b>Price :</b></span> $ {{this.price}} CAD</p>
                 <p><span class="label"><b>Category :</b></span> {{this.category}}</p>
                 <p><span class="label"><b>Description :</b></span> {{this.description}}</p>
-                <button class="btn" onclick="sendData('{{this.product_name}}', '{{this.price}}')">Add to cart</button>
+                <button class="btn" type="submit" id="addBtn" onclick="sendData('{{this.product_name}}', '{{this.price}}')">Add to cart</button>
             </div>
         </div>
         {{/dataValues}}
@@ -43,12 +43,11 @@
             dataType: "json",
             //on success
          success: function(data){
-             
-                console.log("Item has successfully been added to cart!")
+             alert("Your item has been added to the cart!")
             },
             //on error
-            error: function(){
-                console.log("Item has not been added to cart!")
+            error: function(error){
+                console.log(error)
             }
       
         

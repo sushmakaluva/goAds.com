@@ -26,10 +26,10 @@ var hbs = exphbs.create({});
 hbs.handlebars.registerHelper('sum', function (cartItems) {
   let s = 0;
   for(let i=0; i<cartItems.length; i++) {
-    s = cartItems[i].price;
+    s += cartItems[i].price;
   }
 
-  console.log(s)
+  
   return s;
 })
 

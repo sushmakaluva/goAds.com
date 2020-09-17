@@ -9,7 +9,7 @@ module.exports = function (app) {
     })
       .then((dbProduct) => {
         console.log(dbProduct);
-        // res.json(dbProduct);
+        
         res.render('deals', { dbProduct });
       });
   });

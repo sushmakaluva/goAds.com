@@ -1,24 +1,11 @@
 
- 
-  <!-- slider Area Start-->
-  <div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/carthero.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                         <h2 style="color: whitesmoke;">Cart </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <!-- slider Area End-->
+
 
   <!--================Cart Area =================-->
-  <section class="cart_area section_padding">
+  <section class="cart_area">
+      <div class="hero-cap text-center">
+                         <h2>Cart </h2>
+                    </div>
     <div class="container">
       <div class="cart_inner">
         <div class="table-responsive">
@@ -111,11 +98,11 @@ Windows Surface Go 2 </p>
                   <h5>Subtotal</h5>
                 </td>
             
-                {{#each cartItems}}
+               
                 <td>
-                  <h5>{{sum this}}</h5>
-                  </td>
-                {{/each}}
+                  <h5>{{sum cartItems}}</h5>
+                </td>
+                
               </tr>
               <tr class="shipping_area">
                 <td></td>
@@ -167,7 +154,7 @@ function removeData (cartId) {
     type: 'DELETE',
     success: function(result) {
         // Do something with the result
-        console.log("Item has been removed from cart!")
+        
         window.location.href = "/cart"
     },
     error: function(data){
