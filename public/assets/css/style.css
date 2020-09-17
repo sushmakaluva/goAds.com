@@ -2583,6 +2583,10 @@ input:focus::-moz-placeholder {
   }
 }
 
+#searchKeyword {
+  font-size: large;
+  font-weight: bold;
+}
 /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
 .padding-bottom {
   padding-bottom: 250px;
@@ -3495,7 +3499,7 @@ input:focus {
 
 /* line 50, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-left .contact-now li {
-  color: #fff;
+  color: #73fbaf;
   font-size: 14px;
   text-transform: capitalize;
 }
@@ -3524,11 +3528,11 @@ input:focus {
 .header-bottom .main-menu ul li a {
   font-size: 16px;
   color: #000000;
+  font-weight: bold;
   display: inline-block;
   text-transform: capitalize;
-  padding: 10px 18px;
+  padding: 20px 18px;
   display: block;
-  font-size: 14px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
