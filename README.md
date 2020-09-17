@@ -20,15 +20,15 @@ User can also sell a product by posting an ad.
 
 ## Logo Screenshot
 
-![goAds Logo](/assets/img/logo/logo_bottom.png)
+![Logo](/assets/img/logo/logo_bottom.png)
 
 ## Main Page Screenshot
 
-![Main Page Screenshot](/assets/img/mainpage.png?raw=true "Title")
+![Screenshot](/assets/img/mainpage.png)
 
 ## Results Page Screenshot
 
-![Results Page Screenshot](/assets/img/resultspage.png?raw=true "Title")
+![Screenshot](/assets/img/resultspage.png)
 
 ## Features
 
