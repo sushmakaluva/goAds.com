@@ -1,64 +1,48 @@
 <main>
   <div class="container page-wrapper">
-    <h1>Admin Page</h1>
-    <hr>
-    <div class="row">
-      <div class="col-3">
-        <div class="card">
-          <div class="card-block">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                aria-controls="v-pills-home" aria-selected="true">Post an Ad</a>
-              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                aria-controls="v-pills-profile" aria-selected="false">My Ads</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-9">
-        <div class="card">
-          <div class="card-block page-wrapper">
-            <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                aria-labelledby="v-pills-home-tab">
-                <div class="page-wrapper">
-                  <h2>Create Post</h2>
-                  <form id="uploadForm" enctype="multipart/form-data">
-                    <div class="form-group">
-                      <label for="product_name">Enter name of the Product :</label>
-                      <input type="text" class="form-control" name="product_name" id="product_name">
-                    </div>
-                    <div class="form-group">
-                      <label for="price">Enter the Price :</label>
-                      <input type="text" class="form-control" name="price" id="price">
-                    </div>
-                    <div class="form-group">
-                      <label for="category">Choose a Category :</label>
-                      <br>
-                      {{!-- <input type="text" class="form-control" id="category"> --}}
-                      <select id="category" class="form-control" name="category">
-                        <option value="Electronics">Electronics</option>
-                        <option value="Mobiles">Mobiles</option>
-                        <option value="Appliances">Appliances</option>
-                      </select>
-                    </div>
+    <div class="col-11 p-5 m-3">
+      <h1 style="text-align: center;">Post your ad here !!</h1>
+      <br>
+      <div class="card">
+        <div class="card-block p-3 page-wrapper">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <div class="page-wrapper">
+                <h2 style="text-align: center;">Create Ad :</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <label for="product_name">Enter name of the Product :</label>
+                    <input type="text" class="form-control" name="product_name" id="product_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Enter the Price :</label>
+                    <input type="text" class="form-control" name="price" id="price">
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Choose a Category :</label>
                     <br>
-                    <br>
-                    <div class="form-group">
-                      <label for="create-image-url">Upload an Image :</label>
-                      <input type="file" class="form-control-file form-control" name="image" id="image">
-                    </div>
-                    <div class="form-group">
-                      <label for="description">Description :</label>
-                      <textarea class="form-control" name="description" id="description" rows="5"></textarea>
-                    </div>
-                    <input type="submit" class="btn btn-primary" id="post-btn" value="Create Post"></input>
-                  </form>
-                </div>
+                    {{!-- <input type="text" class="form-control" id="category"> --}}
+                    <select id="category" class="form-control" name="category">
+                      <option value="Electronics">Electronics</option>
+                      <option value="Mobiles">Mobiles</option>
+                      <option value="Appliances">Appliances</option>
+                    </select>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="form-group">
+                    <label for="create-image-url">Upload an Image :</label>
+                    <input type="file" class="form-control-file form-control" name="image" id="image">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description :</label>
+                    <textarea class="form-control" name="description" id="description" rows="5"></textarea>
+                  </div>
+                  <input type="submit" class="btn btn-primary" id="post-btn" value="Create Post"></input>
+                </form>
               </div>
-
             </div>
+
           </div>
         </div>
       </div>
