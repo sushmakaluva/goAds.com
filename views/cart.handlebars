@@ -132,7 +132,7 @@ Windows Surface Go 2 </p>
           </table>
           <div class="checkout_btn_inner float-right">
             <a class="btn_1" href="/products">Continue Shopping</a>
-            <a class="btn_1 checkout_btn_1" href="/checkout">Proceed to checkout</a>
+            <a class="btn_1 checkout_btn_1" id="checkoutBtn" href="/checkout">Proceed to checkout</a>
           </div>
         </div>
       </div>
@@ -166,20 +166,34 @@ Windows Surface Go 2 </p>
 
 
 // adding shipping selection to subtotal
+let grandTotal
+
 $(document).ready(function(){
+
+
         $("input[type='radio']").click(function(){
             var shippingValue = $("input[name='shipping']:checked").val();
             if(shippingValue == 8){
   let grandTotal = ""
                 grandTotal = {{sum cartItems}} + 8
-                console.log(grandTotal)
+           
+                localStorage.setItem("grandTotal", JSON.stringify(grandTotal))
+                localStorage.setItem("Shipping", "Standard")
 
             } else if (shippingValue == 15) {
               let grandTotal = ""
                 grandTotal = {{sum cartItems}} + 15
-                console.log(grandTotal)
+               
+                localStorage.setItem("grandTotal", JSON.stringify(grandTotal))
+                localStorage.setItem("Shipping", "Express")
             }
         });
-    });
+
+  $("#checkoutBtn").on("click", function () {
+sessionStorage.setItem("subTotal", JSON.stringify({{sum cartItems}})
+)
+  })
+
+      });
 
 </script>

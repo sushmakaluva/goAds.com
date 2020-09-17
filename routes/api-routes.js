@@ -75,6 +75,33 @@ module.exports = function (app) {
           res.render('cart', { cartItems: dbCart })
         });
     });
+
+    // Displaying items in confirmation
+
+    app.get('/confirmation', (req, res) => {
+      db.Cart.findAll({raw : true
+      })
+        .then((dbCart) => {
+         
+          
+          res.render('orderConfirmation',  { cartItems: dbCart } )
+         
+        });
+    });
+
+
+    // Displaying items in checkout
+
+    app.get('/checkout', (req, res) => {
+      db.Cart.findAll({raw : true
+      })
+        .then((dbCart) => {
+         
+          
+          res.render('checkout',  { cartItems: dbCart } )
+         
+        });
+    });
     
   //   // FIND ONE PRODUCT IN CART
   //   app.get('/api/cart/:product_id', (req, res) => {

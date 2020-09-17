@@ -131,34 +131,31 @@
                   <span>Total</span>
                 </a>
               </li>
+              {{#each cartItems}}
 
               <li>
-                <a href="#">Item Name
-                  <span class="middle">x 01</span>
-                  <span class="last">$36.00</span>
+                <a href="#">{{this.product_name}}
+                  
+                  <span class="last">${{this.price}} CAD</span>
                 </a>
               </li>
-              <li>
-                <a href="#">Item Name
-                  <span class="middle">x 01</span>
-                  <span class="last">$60.00</span>
-                </a>
-              </li>
+              {{/each}}
+              
             </ul>
             <ul class="list list_2">
               <li>
                 <a href="#">Subtotal
-                  <span>$96.00</span>
+                  <span>$ {{sum cartItems}} CAD</span>
                 </a>
               </li>
               <li>
                 <a href="#">Shipping
-                  <span>Express rate: $15.00</span>
+                  <span id="selectedShipping"></span>
                 </a>
               </li>
               <li>
                 <a href="#">Grand Total
-                  <span id="grandTotal">$111.00</span>
+                  <span id="grandTotal"></span>
                 </a>
               </li>
             </ul>
@@ -192,4 +189,11 @@
       })
     }, false)
   }())
+
+var shipping= localStorage.getItem("Shipping")
+$("#selectedShipping").text(shipping)
+
+var total= JSON.parse(localStorage.getItem("grandTotal"))
+$("#grandTotal").text(`$${total} CAD`)
+
 </script>

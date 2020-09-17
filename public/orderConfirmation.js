@@ -26,3 +26,7 @@ $('#country').text(country);
 $('#state').text(state);
 $('#street').text(address);
 $('#date').text(`:  ${date}`);
+var total= JSON.parse(localStorage.getItem("grandTotal"))
+$("#total").text(`: $${total} CAD`)
+
+
