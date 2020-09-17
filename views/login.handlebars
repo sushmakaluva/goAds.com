@@ -1,41 +1,52 @@
-<main>
+{{!-- FORM FOR LOGIN --}}
+
+<!--================login_part Area =================-->
+<section class="login_part ">
   <div class="container">
-    <div class="d-flex justify-content-center h-100">
-      <div class="card">
-        <div class="card-header">
-          <h3>Sign In</h3>
-        </div>
-        <div class="card-body">
-          <form>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
-              </div>
-              <input type="text" class="form-control" placeholder="username" />
-            </div>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-key"></i></span>
-              </div>
-              <input type="password" class="form-control" placeholder="password" />
-            </div>
-            <div class="row align-items-center remember">
-              <input type="checkbox" />Remember Me
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Login" class="btn float-right login_btn" />
-            </div>
-          </form>
-        </div>
-        <div class="card-footer">
-          <div class="d-flex justify-content-center links">
-            Don't have an account?<a href="#">Sign Up</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_text text-center">
+          <div class="login_part_text_iner">
+            <h2>New to our Site?</h2>
+            <p>Create an account now and start posting classified ads, it's free!</p>
+            <a href="#" class="btn_3">Create an Account</a>
           </div>
-          <div class="d-flex justify-content-center">
-            <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_form">
+          <div class="login_part_form_iner">
+            <h3>Welcome Back ! <br>
+              Please Sign in now</h3>
+            <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+              <div class="col-md-12 form-group p_star">
+                <input type="text" class="form-control" id="name" name="name" value="" placeholder="Username">
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input type="password" class="form-control" id="password" name="password" value=""
+                  placeholder="Password">
+              </div>
+              <div class="col-md-12 form-group">
+                <div class="creat_account d-flex align-items-center">
+                  <input type="checkbox" id="f-option" name="selector">
+                  <label for="f-option">Remember me</label>
+                </div>
+                <button type="submit" value="submit" class="btn_3" style="color: black;"><a href="/postAd">
+                    log in
+                  </a></button>
+
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-</main>
+</section>
+<!--================login_part end =================-->
+
+
+{{!-- JAVASCRIPT --}}
+<script>
+
+</script>
