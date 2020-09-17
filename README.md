@@ -18,15 +18,15 @@ Our application is a one-stop shop for buying and selling products - Electronics
 Our app is a simple alternative to all the confusing sites. A user can choose from the already available product-ads and purchase a product.
 User can also sell a product by posting an ad.
 
-## Logo Screenshot
+## Logo
 
 ![Logo](/public/assets/img/logo/logo_bottom.png)
 
-## Main Page Screenshot
+## Main Page
 
 ![Screenshot](/public/assets/img/mainpage.png)
 
-## Results Page Screenshot
+## Results Page
 
 ![Screenshot](/public/assets/img/resultspage.png)
 
