@@ -18,6 +18,7 @@ const { zip } = queryString;
 const { country } = queryString;
 const { state } = queryString;
 const { address } = queryString;
+const total = queryString.grandTotal;
 
 const date = moment().format('MMM Do YYYY');
 $('#name').text(`${firstName} ${lastName}`);
@@ -26,3 +27,4 @@ $('#country').text(country);
 $('#state').text(state);
 $('#street').text(address);
 $('#date').text(`:  ${date}`);
+$('#total').text(total);
