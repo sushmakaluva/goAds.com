@@ -20,6 +20,16 @@ function gridDisplay(dbProducts) {
 }
 
 module.exports = (app) => {
+  app.get('/', (req, res) => {
+    db.Products.findAll({
+      limit: 3,
+      order: [['product_id', 'DESC']],
+    })
+      .then((dbProducts) => {
+        res.render('index', { products: dbProducts });
+      });
+  });
+
   // Get route for returning products which have deals
   app.get('/deals', (req, res) => {
     db.Products.findAll({
@@ -123,19 +133,6 @@ module.exports = (app) => {
       .then((dbProducts) => {
         const result = gridDisplay(dbProducts);
         res.render('products', { products: result });
-      });
-  });
-
-
-
-  // GET route to display recent Ads
-  app.get('/api/recent-ads', (req, res) => {
-    db.Products.findAll({
-      limit: 3,
-      order: [['product_id', 'DESC']],
-    })
-      .then((dbProduct) => {
-        res.json(dbProduct);
       });
   });
 
