@@ -16,9 +16,11 @@ $(document).ready(() => {
       data: formData,
       success(data) {
         console.log('Item has been successfully posted!', data);
+        alert('Ad has been posted successfully !!');
       },
       error() {
         console.log('Item has not been posted!');
+        alert('Please refresh the page and try again later');
       },
     });
   });
