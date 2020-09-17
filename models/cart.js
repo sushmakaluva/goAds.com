@@ -20,19 +20,5 @@ module.exports = function (sequelize, DataTypes) {
       },
 
     });
-
-  Cart.bulkCreate([
-    {
-      product_name: 'Samsung Galaxy S10+',
-      price: 979,
-
-    },
-    {
-      product_name: 'Windows Surface Go 2',
-      price: 529,
-
-    },
-
-  ], { ignoreDuplicates: true });
   return Cart;
 };

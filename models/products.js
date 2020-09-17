@@ -63,20 +63,20 @@ module.exports = function (sequelize, DataTypes) {
       description: 'Bluetooth, Wireless, IOS 10inch',
       img_data: readImageData(`${__dirname}/../public/assets/img/products/airpods.jpeg`),
     },
-    {
-      product_name: 'Bose Headphones',
-      price: 535,
-      category: 'Electronics',
-      description: 'Over Ear, Wireless, Black color',
-      img_data: readImageData(`${__dirname}/../public/assets/img/products/bose.jpg`),
-    },
-    {
-      product_name: 'OnePlus 7T - 128GB',
-      price: 799,
-      category: 'Mobiles',
-      description: 'USB Cable, LG Charger, Single SIM',
-      img_data: readImageData(`${__dirname}/../public/assets/img/products/oneplus.jpg`),
-    },
+    // {
+    //   product_name: 'Bose Headphones',
+    //   price: 535,
+    //   category: 'Electronics',
+    //   description: 'Over Ear, Wireless, Black color',
+    //   img_data: readImageData(`${__dirname}/../public/assets/img/products/bose.jpg`),
+    // },
+    // {
+    //   product_name: 'OnePlus 7T - 128GB',
+    //   price: 799,
+    //   category: 'Mobiles',
+    //   description: 'USB Cable, LG Charger, Single SIM',
+    //   img_data: readImageData(`${__dirname}/../public/assets/img/products/oneplus.jpg`),
+    // },
     {
       product_name: 'Samsung Galaxy S9 - 64GB',
       price: 468,
@@ -98,20 +98,20 @@ module.exports = function (sequelize, DataTypes) {
       description: 'Touchscreen, Wireless 4G, Cellular',
       img_data: readImageData(`${__dirname}/../public/assets/img/products/lumia.jpg`),
     },
-    {
-      product_name: 'Frigidaire Refrigerator',
-      price: 2050,
-      category: 'Appliances',
-      description: 'Stainless steel, Tempered glass shelf, 3.1 cu.ft. total capacity',
-      img_data: readImageData(`${__dirname}/../public/assets/img/products/fridge.jpg`),
-    },
-    {
-      product_name: 'GE Dishwasher',
-      price: 800,
-      category: 'Appliances',
-      description: 'Countertop, Energy star compliant, Low water consumption',
-      img_data: readImageData(`${__dirname}/../public/assets/img/products/dishwasher.jpg`),
-    },
+    // {
+    //   product_name: 'Frigidaire Refrigerator',
+    //   price: 2050,
+    //   category: 'Appliances',
+    //   description: 'Stainless steel, Tempered glass shelf, 3.1 cu.ft. total capacity',
+    //   img_data: readImageData(`${__dirname}/../public/assets/img/products/fridge.jpg`),
+    // },
+    // {
+    //   product_name: 'GE Dishwasher',
+    //   price: 800,
+    //   category: 'Appliances',
+    //   description: 'Countertop, Energy star compliant, Low water consumption',
+    //   img_data: readImageData(`${__dirname}/../public/assets/img/products/dishwasher.jpg`),
+    // },
     {
       product_name: 'Panasonic Microwave',
       price: 275,
@@ -129,5 +129,3 @@ module.exports = function (sequelize, DataTypes) {
   ], { ignoreDuplicates: true });
   return Products;
 };
-
-

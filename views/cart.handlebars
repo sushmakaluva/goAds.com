@@ -1,9 +1,8 @@
-<section>
-  <h2 style="text-align: center; color:royalblue; " class="m-5">Cart </h2>
-</section>
 <!--================Cart Area =================-->
-
-<section class="cart_area ">
+<section class="cart_area">
+  <div class="hero-cap text-center">
+    <h2>Cart </h2>
+  </div>
   <div class="container">
     <div class="cart_inner">
       <div class="table-responsive">
@@ -12,24 +11,26 @@
             <tr>
               <th scope="col">Product</th>
               <th scope="col">Price</th>
-              {{!-- <th scope="col">Quantity</th>
-                <th scope="col">Total</th> --}}
+
             </tr>
           </thead>
           <tbody>
+            {{#each cartItems}}
+
+
             <tr>
               <td>
                 <div class="media">
-                  <div class="d-flex">
-                    <img src="assets/img/arrivel/samsunggalaxy.jpg" alt="" />
-                  </div>
+                  {{!-- <div class="d-flex">
+                      <img src="assets/img/arrivel/samsunggalaxy.jpg" alt="" />
+                    </div> --}}
                   <div class="media-body">
-                    <p>Samsung Galaxy S10+</p>
+                    <p>{{this.product_name}}</p>
                   </div>
                 </div>
               </td>
               <td>
-                <h5>CAD $979.99</h5>
+                <h5> ${{this.price}} CAD</h5>
               </td>
               {{!-- <td>
                   <div class="product_count">
@@ -51,103 +52,148 @@
               {{!-- <td>
                   <h5>$36.00</h5>
                 </td> --}}
-              <td>
-                <a href="#" style="color: red; text-decoration: underline;">Remove</a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="assets/img/arrivel/windowstablet.jpg" alt="" />
-                  </div>
-                  <div class="media-body">
-                    <p>
-                      Windows Surface Go 2 </p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h5>CAD $529 </h5>
-              </td>
+                 <td>
+                  <a href="#" onclick="removeData('{{this.cart_id}}')" style="color: red; text-decoration: underline;">Remove</a>
+                </td>
+         {{/each}}
+              </tr>
 
-              {{!-- <td>
+               
+       
+              {{!-- <tr>
+                <td>
+                  <div class="media">
+                    <div class="d-flex">
+                      <img src="assets/img/arrivel/windowstablet.jpg" alt="" />
+                    </div>
+                    <div class="media-body">
+                      <p>
+Windows Surface Go 2 </p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h5>CAD $529 </h5>
+                </td>
+                
+                {{!-- <td>
                   <div class="product_count">
                       <span class="input-number-decrement"> <i class="ti-minus"></i></span>
                       <input class="input-number" type="text" value="1" min="0" max="10">
                       <span class="input-number-increment"> <i class="ti-plus"></i></span>
                   </div>
                 </td> --}}
-              {{!-- <td>
+                {{!-- <td>
                   <h5>CAD $529.00</h5>
                 </td> --}}
-              <td>
-                <a href="#" style="color: red; text-decoration: underline;">Remove</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td></td>
-
-              <td>
-                <h5>Subtotal</h5>
-              </td>
-              <td>
-                <h5></h5>
-              </td>
-            </tr>
-            <tr class="shipping_area">
-              <td></td>
-
-              <td>
-                <h5>Shipping</h5>
-              </td>
-
-              <td>
-                <div class="shipping_box">
-                  <ul class="list">
-                    <li>
-                      Standard : $8.00
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-
-                    <li>
-                      Express : $15.00
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-
-                  </ul>
-
-
-
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="checkout_btn_inner float-right">
-          <a class="btn_1" href="/products">Continue Shopping</a>
-          <a class="btn_1 checkout_btn_1" href="/checkout">Proceed to checkout</a>
+                 --}}
+            
+              <tr>
+                <td></td>
+                
+                <td>
+                  <h5>Subtotal</h5>
+                </td>
+            
+               
+                <td>
+                  <h5>{{sum cartItems}}</h5>
+                </td>
+                
+              </tr>
+              <tr class="shipping_area">
+                <td></td>
+                
+                <td>
+                  <h5>Shipping</h5>
+                </td>
+                
+                <td>
+                  <div class="shipping_box">
+                    <ul class="list">
+                      <li>
+                       <label for="standardShipping"> Standard : $8.00 </label>
+                        <input type="radio" value="8" aria-label="Radio button for following text input" name="shipping" value="8">
+                      </li>
+                    
+                      <li>
+                        <label for="expressShipping"> Express : $15.00 </label>
+                        <input type="radio" value="15" aria-label="Radio button for following text input" name="shipping" value="15">
+                      </li>
+                     
+                    </ul>
+                  
+                  
+                    
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="checkout_btn_inner float-right">
+            <a class="btn_1" href="/products">Continue Shopping</a>
+            <a class="btn_1 checkout_btn_1" id="checkoutBtn" href="/checkout">Proceed to checkout</a>
+          </div>
         </div>
       </div>
     </div>
 </section>
 <!--================End Cart Area =================-->
 
-{{!-- <form name="ShoppingList">
-    <fieldset>
-        <legend>Shopping cart</legend>
-        <label>Item: <input type="text" id="item" name="name"></label>
-        <label>Price: <input type="text" id="price" name="data"></label>
 
-        <button data-number="10" type="button" class="btn btn-primary btn-save2" onclick="sessionStorage.setItem($('#item').val(), $('#price').val()); console.log('item saved')">Save</button>
-        <input type="button" value="Update" onclick="ModifyItem()">
-        <input type="button" value="Delete" onclick="RemoveItem()">
-    </fieldset>
-    <div id="items_table">
-        <h2>Shopping List</h2>
-        <table id="list"></table>
-        <label><input type="button" value="Clear" onclick="ClearAll()">
-        * Delete all items</label>
-    </div>
-</form> --}}
+<script>
+
+  // api call to delete item
+
+  function removeData(cartId) {
+    const queryUrl = "/api/cart/" + cartId
+    $.ajax({
+      url: queryUrl,
+      type: 'DELETE',
+      success: function (result) {
+        // Do something with the result
+
+        window.location.href = "/cart"
+      },
+      error: function (data) {
+        console.log(data)
+      }
+
+    });
+  }
+
+  // calculating subtotal
+
+
+// adding shipping selection to subtotal
+let grandTotal
+
+$(document).ready(function(){
+
+
+        $("input[type='radio']").click(function(){
+            var shippingValue = $("input[name='shipping']:checked").val();
+            if(shippingValue == 8){
+  let grandTotal = ""
+                grandTotal = {{sum cartItems}} + 8
+           
+                localStorage.setItem("grandTotal", JSON.stringify(grandTotal))
+                localStorage.setItem("Shipping", "Standard")
+
+            } else if (shippingValue == 15) {
+              let grandTotal = ""
+                grandTotal = {{sum cartItems}} + 15
+               
+                localStorage.setItem("grandTotal", JSON.stringify(grandTotal))
+                localStorage.setItem("Shipping", "Express")
+            }
+        });
+
+  $("#checkoutBtn").on("click", function () {
+sessionStorage.setItem("subTotal", JSON.stringify({{sum cartItems}})
+)
+  })
+
+      });
+
+</script>

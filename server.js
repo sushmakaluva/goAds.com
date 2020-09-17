@@ -18,6 +18,19 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+
+// register new helper function 
+var hbs = exphbs.create({});
+hbs.handlebars.registerHelper('sum', function (cartItems) {
+  let s = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    s += cartItems[i].price;
+  }
+
+
+  return s;
+})
+
 // Routes
 // =============================================================
 require('./routes/api-routes.js')(app);
