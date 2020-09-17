@@ -29,9 +29,6 @@ User can also sell a product by posting an ad.
 
 ![Screenshot](/public/assets/img/mainpage.png)
 
-## Results Page
-
-![Screenshot](/public/assets/img/resultspage.png)
 
 ## Features
 
