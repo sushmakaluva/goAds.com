@@ -12,7 +12,7 @@ $(document).ready(() => {
       processData: false,
       contentType: false,
       cache: false,
-      url: '/api/postAd',
+      url: '/api/postProduct',
       data: formData,
       success(data) {
         console.log('Item has been successfully posted!', data);

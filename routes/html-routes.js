@@ -19,8 +19,8 @@ module.exports = function (app) {
     res.render('orderConfirmation');
   });
 
-  app.get('/postAd', (req, res) => {
-    res.render('postAd');
+  app.get('/postProduct', (req, res) => {
+    res.render('postProduct');
   });
 
   app.get('/logIn', (req, res) => {
