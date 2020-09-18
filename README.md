@@ -59,6 +59,7 @@ User can also sell a product by posting an ad.
 - express
 - express-handlebars
 - multer
+- moment
 - mysql2
 - sequelize
 
